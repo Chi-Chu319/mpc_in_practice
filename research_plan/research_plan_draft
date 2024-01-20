@@ -1,0 +1,42 @@
+graph problems
+
+Theoratical model vs distributional programming framework:
+works perfectly
+works but needs works/efficiency is low
+does not work at all
+
+what can be the compatibility / incompatibility
+1. Evaluating Performance
+How this framework perform compare to another framework with the same message passing model and problem (Communication rounds, memory usage)
+How the framework perform if the problem scales (Strong scaling and weak scaling senario)
+2. Requirement from the programming framework
+memory usage
+CPU usage
+network bandwidth
+disk I/O
+
+Give mathmatical proves
+
+method:
+Reading documentation of programming frameworks
+Analyzing the compatibility of frameworks and models:
+1. Using classical problems that requires HPC (Graph problems)
+2. Designing algorithms using frameworks and models
+3. Analysing performance from time and memory-wise and consider scaling
+4. conclude the compatibility between a model and a framework
+5. (Optional) Applying the algorithm on real machines to verify the result
+plan:
+6-month plan
+Month 1
+reading documentation of frameworks
+learning about the model
+choosing the problems for analysing
+
+Month 2-3
+Designing algorithms w.r.t. frameworks and models and give mathmatical proofs
+
+Month 4
+(Optional) Applying the algorithm on real machines to verify the result
+
+Month 5-6
+Writing thesis
