@@ -9,71 +9,93 @@
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{listings}
 \usepackage{float}
-\title{MPC in practice research plan}
+\title{MPC in Practice Research Plan}
 \author{Tianxing Wu}
 
 \begin{document}
 \maketitle
 
 \section{Research Purpose}
-The purpose of this research is to understand the compatibility between message-passing frameworks, such as k-machine model, congested clique and BSP, and distributed computing framework, such as MPI, OpenMP, Pytorch and tensorflow.
+The purpose of this research is to explore and understand the compatibility between various message-passing frameworks, such as the k-machine model, congested clique, and BSP, and different distributed computing frameworks, including MPI, OpenMP, Pytorch, and TensorFlow.
 
-How to evaluate compatibility /incompatibility
+Evaluation of Compatibility/Incompatibility:
 \begin{enumerate}
   \item{
-    Evaluating Performance.
+    Evaluating Performance:
       \begin{itemize}
-        \item How does this framework perform compared to another framework with the same message-passing model and problem (Communication rounds, memory usage).
-        \item How does this framework perform with a model if the problem scales (Strong scaling and weak scaling).
+        \item How does this framework perform in comparison to another framework with the same message-passing model and problem, in terms of communication rounds and memory usage?
+        \item How does this framework's performance change if the problem scales, in terms of strong scaling and weak scaling?
       \end{itemize}
     }
   \item {
-    System requirement from the programming framework.
+    System Requirements from the Programming Framework:
       \begin{itemize}
-        \item memory usage
+        \item Memory usage
         \item CPU usage
-        \item network bandwidth
-        \item disk I/O
+        \item Network bandwidth
+        \item Disk I/O
       \end{itemize}
     }
 \end{enumerate}
 
 \section{Objective}
-For a framework and a model, the objective would be to show either of the following:
+For a specific framework and model, the objective is to demonstrate one of the following:
 \begin{itemize}
-  \item The framework and model is perfectly compatible.
-  \item The framework and model is not perfectly compatible but with some extra work, the model and framework could work together to solve problems in a relative efficient way.
-  \item The framework and model is not compatible at all.
+  \item The framework and model are perfectly compatible.
+  \item The framework and model are not perfectly compatible, but with some additional effort, they could work together efficiently to solve problems.
+  \item The framework and model are completely incompatible.
 \end{itemize}
-To show the compatibility, algorithms will be presented so as proofs. To show the incompatibility, proofs need to be given.
+To demonstrate compatibility, algorithms will be presented with accompanying proofs. To indicate incompatibility, proofs will also be required.
+
 \section{Method}
 \begin{itemize}
-
-  \item Reading documentation of programming frameworks
-  \item {
-    Analyzing the compatibility of frameworks and models:
+  \item Reviewing and understanding the documentation of programming frameworks.
+  \item Analyzing the compatibility of frameworks and models:
       \begin{enumerate}
-        \item Choosing classical problems that requires HPC (Graph problems).
-        \item Designing algorithms using frameworks and models.
-        \item Analyzing performance from time and memory-wise and consider scaling.
-        \item Conclude the compatibility between a model and a framework.
-        \item (Optional) Applying the algorithm on real machines to verify the result.
+        \item Selecting classical problems that require High-Performance Computing (HPC), such as graph problems.
+        \item Designing algorithms using the selected frameworks and models.
+        \item Analyzing performance in terms of time and memory usage, considering scalability.
+        \item Concluding the compatibility between a specific model and a framework.
+        \item (Optional) Applying the algorithm on real machines to verify the results.
       \end{enumerate}
-  }
 \end{itemize}
 
 \section{Plan}
-The scope of this research is 6-month.\\\\
-Month 1
+The duration of this research is planned for 6 months.
+
+Month 1 - 2:
 \begin{itemize}
-  \item Reading documentation of frameworks
-  \item Learning about the model
-  \item Choosing the problems for analyzing
+  \item Literature Review. Conduct a comprehensive review of existing studies on MPI, OpenMP, PyTorch, TensorFlow, and message-passing models like the k-machine model, congested clique, and BSP.
+  \item Selecting problems for analysis.
+  \item Design a metric for evaluating the performance.
 \end{itemize}
-Month 2 - 3\\
-Designing the algorithms w.r.t frameworks and models and give mathematical proofs\\\\
-Month 4\\
-(Optional) Applying the algorithm on real machines to verify the result\\\\
-Month 5 - 6\\
-Writing report
+
+Months 3 - 4:
+\begin{itemize}
+  \item Designing algorithms concerning the frameworks and models, analyzing the performance, and evaluating using the metrics.
+\end{itemize}
+
+Months 5 - 6:
+\begin{itemize}
+  \item Writing the research report.
+\end{itemize}
+
+Optional:
+\begin{itemize}
+  \item Applying the algorithms on real machines to verify the results.
+\end{itemize}
+
+\section{Reference}
+\begin{itemize}
+  \item J. Augustine, K. Kothapalli and G. Pandurangan, "Efficient Distributed Algorithms in the k-machine model via PRAM Simulations," 2021 IEEE International Parallel and Distributed Processing Symposium (IPDPS), Portland, OR, USA, 2021, pp. 223-232, doi: 10.1109/IPDPS49936.2021.00031.
+  \item John Augustine, Mohsen Ghaffari, Robert Gmyr, Kristian Hinnenthal, Fabian Kuhn, Jason Li, and Christian Scheideler. Distributed Computation in the Node-Congested Clique. arXiv preprint arXiv:1805.07294v1, 2018.
+  \item John Augustine, Mohsen Ghaffari, Robert Gmyr, Kristian Hinnenthal, Fabian Kuhn, Jason Li, and Christian Scheideler. Distributed Computation in the Node-Congested Clique. arXiv preprint arXiv:1805.07294v1, 2018.
+  \item Arvind Krishnamurthy and John Zahorjan. Parallel Algorithms. University of Washington, 2002.
+  \item Martín Abadi et al. TensorFlow: Large-Scale Machine Learning on Heterogeneous Systems. 2015.
+  \item Message Passing Interface Forum. MPI: A Message-Passing Interface Standard Version 3.1. 2015.
+  \item Dagum, Leonardo, and Ramesh Menon. “OpenMP: an industry standard API for shared-memory programming.” Computational Science & Engineering, IEEE 5.1 (1998): 46-55.
+
+  
+\end{itemize}
+
 \end{document}
