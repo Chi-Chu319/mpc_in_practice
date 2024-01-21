@@ -9,6 +9,14 @@
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{listings}
 \usepackage{float}
+\usepackage[numbers]{natbib}
+\usepackage[
+backend=biber,
+style=numeric,
+sorting=ynt
+]{biblatex}
+\addbibresource{references.bib}
+
 \title{MPC in Practice Research Plan}
 \author{Tianxing Wu}
 
@@ -85,17 +93,7 @@ Optional:
   \item Applying the algorithms on real machines to verify the results.
 \end{itemize}
 
-\section{Reference}
-\begin{itemize}
-  \item J. Augustine, K. Kothapalli and G. Pandurangan, "Efficient Distributed Algorithms in the k-machine model via PRAM Simulations," 2021 IEEE International Parallel and Distributed Processing Symposium (IPDPS), Portland, OR, USA, 2021, pp. 223-232, doi: 10.1109/IPDPS49936.2021.00031.
-  \item John Augustine, Mohsen Ghaffari, Robert Gmyr, Kristian Hinnenthal, Fabian Kuhn, Jason Li, and Christian Scheideler. Distributed Computation in the Node-Congested Clique. arXiv preprint arXiv:1805.07294v1, 2018.
-  \item John Augustine, Mohsen Ghaffari, Robert Gmyr, Kristian Hinnenthal, Fabian Kuhn, Jason Li, and Christian Scheideler. Distributed Computation in the Node-Congested Clique. arXiv preprint arXiv:1805.07294v1, 2018.
-  \item Arvind Krishnamurthy and John Zahorjan. Parallel Algorithms. University of Washington, 2002.
-  \item Martín Abadi et al. TensorFlow: Large-Scale Machine Learning on Heterogeneous Systems. 2015.
-  \item Message Passing Interface Forum. MPI: A Message-Passing Interface Standard Version 3.1. 2015.
-  \item Dagum, Leonardo, and Ramesh Menon. “OpenMP: an industry standard API for shared-memory programming.” Computational Science & Engineering, IEEE 5.1 (1998): 46-55.
-
-  
-\end{itemize}
-
+\medskip
+\nocite{*}
+\printbibliography
 \end{document}
