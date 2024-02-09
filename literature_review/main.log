@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  21 JAN 2024 18:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  5 FEB 2024 16:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/media/tianxing/Shared Volume/studies/aalto_MSc/HPC_thesis/mpc_in_practice/research_plan/main.tex"
-(/media/tianxing/Shared Volume/studies/aalto_MSc/HPC_thesis/mpc_in_practice/research_plan/main.tex
+**"/media/tianxing/Shared Volume/studies/aalto_MSc/HPC_thesis/mpc_in_practice/literature_review/main.tex"
+(/media/tianxing/Shared Volume/studies/aalto_MSc/HPC_thesis/mpc_in_practice/literature_review/main.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -710,25 +710,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-/media/tianxing/Shared Volume/studies/aalto_MSc/HPC_thesis/mpc_in_practice/research_plan/main.tex:99: Misplaced alignment tab character &.
-<argument> IEEE Computational Science &
-                                        Engineering
-l.99 \end
-         {document}
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-
-Overfull \hbox (1.42949pt too wide) in paragraph at lines 99--99
-[]\OT1/cmr/m/n/10 John Au-gus-tine et al. ``Dis-tributed Com-pu-ta-tion in the Node-Congested Clique''. In: \OT1/cmr/m/it/10 arXiv preprint
- []
-
-[2] (./main.aux)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -739,7 +721,7 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 
 Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  08351CD11DF044CAC3081D798718FAF9;350.
+(rerunfilecheck)             After:  2660B2F3813FB5B35AC4E10BAE6178DE;411.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                main
@@ -750,18 +732,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19665 strings out of 478287
- 338667 string characters out of 5849289
- 1071370 words of memory out of 5000000
- 37632 multiletter control sequences out of 15000+600000
- 477657 words of font info for 61 fonts, out of 8000000 for 9000
+ 19621 strings out of 478287
+ 337653 string characters out of 5849289
+ 1064374 words of memory out of 5000000
+ 37605 multiletter control sequences out of 15000+600000
+ 476853 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,6n,68p,828b,1765s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (2 pages, 113655 bytes).
+ 60i,6n,68p,832b,1761s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on main.pdf (1 page, 105967 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
- 21 named destinations out of 1000 (max. 500000)
+ 67 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
+ 7 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

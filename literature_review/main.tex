@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+% Useful packages
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{listings}
+\usepackage{float}
+\usepackage[numbers]{natbib}
+\usepackage[
+backend=biber,
+style=numeric,
+sorting=ynt
+]{biblatex}
+\addbibresource{references.bib}
+
+\title{MPC in Practice Literature Review}
+\author{Tianxing Wu}
+
+\begin{document}
+\maketitle
+
+\section{K-machine model}
+The k-machine model, introduced in \cite{DCLP}, is a distributed computing model where a network of k machines $N = \{p_1, p_2, \dots p_k\}$ are pairwise interconnected by bidirectional point-to-point communication links.
+Each machine executes a copy of the Algorithm $A$ in a synchronous fashion. In each round, the machines communicate through the communication links and can perform local computations. Each machine has local memory and has no other means of sharing memory than using the links.
+Each link is assumed to have a bandwidth of $W$. This means that in each round, only $W$ bits can be transmitted over the link.
+
+\section{Random vertex partition}
+Random vertex partition is a model to assign vertices from a graph $G$ to machines for distributed computations. It is introduced in \cite{DCLP}.
+In this model, each vertex is assigned to one of the $k$ machines independently and randomly. All of the incident edges of a vertex are assigned to the machine as well when a vertex is assigned to that machine.
+
+\section{Congested clique}
+
+\medskip
+\nocite{*}
+\printbibliography
+\end{document}
