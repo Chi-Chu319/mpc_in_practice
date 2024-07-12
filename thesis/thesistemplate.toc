@@ -1,0 +1,26 @@
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {section}{Abstract{} }{4}{section*.1}%
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {section}{Preface}{5}{section*.2}%
+\contentsline {section}{Contents}{6}{section*.3}%
+\contentsline {section}{\numberline {1}Introduction}{7}{section.1}%
+\contentsline {section}{\numberline {2}Literature review}{8}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Structure of the thesis}{8}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Page numbering}{9}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Structuring the text in the main matter}{9}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Sections}{9}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Paragraphs}{10}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Equations}{10}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}Figures and tables}{11}{subsubsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.4}Referencing parts in the thesis}{12}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Citation}{13}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Bibliography or list of references}{13}{subsubsection.2.5.1}%
+\contentsline {section}{\numberline {3}Research material and methods}{17}{section.3}%
+\contentsline {section}{\numberline {4}Results}{18}{section.4}%
+\contentsline {section}{\numberline {5}Summary/Conclusions}{19}{section.5}%
+\contentsline {section}{References}{20}{section*.8}%
