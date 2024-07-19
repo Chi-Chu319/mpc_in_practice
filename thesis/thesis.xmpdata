@@ -1,0 +1,6 @@
+\Title {MPC in practice}
+\Author {Tianxing Wu}
+\Copyright {\textcopyright \ 2024. This work is licensed under a Creative Commons "Attribution-NonCommercial-ShareAlike 4.0 International" (BY-NC-SA 4.0) license.}
+\CopyrightURL {https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en}
+\Subject { Purpose:\\ The purpose of this thesis is to study how congested clique algorithms perform on modern supercomputers.\\ Methodology:\\ Studied how an MST algorithm performs on the Puhti supercomputer. The congested clique setting is simulated with MPI and CUDA.\\ Result:\\ }
+\Keywords {Distributed computing, Supercomputing, Congested clique, MST, Puhti, MPI, CUDA, MPC}
