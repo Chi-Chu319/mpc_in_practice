@@ -167,7 +167,7 @@
 Purpose:\\
 The purpose of this thesis is to study how congested clique algorithms perform on modern supercomputers.\\
 Methodology:\\
-Studied how an MST algorithm performs on the Puhti supercomputer. The congested clique setting is simulated with MPI and CUDA.\\
+Studied how an MST algorithm performs on the Puhti supercomputer. The congested clique setting is simulated with MPI\_and CUDA.\\
 Result:\\
 }
 
@@ -319,7 +319,7 @@ How the algorithm performs compared to traditional sequential algorithms. By inc
 Scalability:
 \begin{itemize}
 	\item[--] Strong scaling and weak scaling (How having more processes speeds up the computation, which part of the hardware will become bottleneck when scaling continuously).
-	\item[--] Time composition for the run when scaling (MPI time vs local). Does the time complexity hold?
+	\item[--] Time composition for the run when scaling (MPI\_time vs local). Does the time complexity hold?
 \end{itemize}
 
 \subsection{The MST problem}
@@ -335,13 +335,20 @@ Used Slurm workload manager \cite{Slurm}, to allocate computing nodes. Each node
 The nodes are connected with a 100 Gbps HDR100 link, and the topology is a fat tree with a blocking factor of approximately 2:1. \cite{PuhtiDoc}
 
 \subsection{Congested Clique simulation}
-Each thread 
-At the start, rank 0 generates the graph and distributes it to all other ranks by MPI send. each rank receives only the adjacent edges of the node(s) it is responsible for. The algorithm is run iteratively until the MST is found. Each iteration consists of a fixed number of steps and MPI communication.\\
-step 1 $\rightarrow$ MPI Alltoallv\\
-step 2 $\rightarrow$ MPI Alltoallv\\
-step 3 $\rightarrow$ MPI Scatter\\
-step 4 $\rightarrow$ MPI Gather\\
-step 5 and 6 $\rightarrow$ MPI Scatter and local computation\\
+At the begining, each rank receives only the adjacent edges of the node(s) it is responsible for. The algorithm is run iteratively until the MST is found. Each iteration consists of a fixed number of steps and MPI\_communication.\\
+step 1 $\rightarrow$ MPI\_Alltoallv\\
+step 2 $\rightarrow$ MPI\_Alltoallv\\
+step 3 $\rightarrow$ MPI\_Scatter\\
+step 4 $\rightarrow$ MPI\_Gather\\
+step 5 and 6 $\rightarrow$ MPI\_Scatter and local computation\\
+\subsection{Memory limit and graph generation}
+Each node can have at most 40 threads and has a memory limit of 192 GiB. With $n$ threads for a node each thread can have at most $192/n$ GiB memory.
+
+The graph is represented by adj matrix. There is a naive approach and a distributed approach to generate the graph.
+
+Naive generation: generate the adj matrix on rank 0 and scatter it to all other ranks with MPI\_Scatter. Each rank gets a matrix row.
+
+
 
 \clearpage
 

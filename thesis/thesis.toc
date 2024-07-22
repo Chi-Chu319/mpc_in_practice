@@ -15,6 +15,7 @@
 \contentsline {section}{\numberline {2}CPU implementation}{9}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Hardware}{9}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Congested Clique simulation}{9}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Memory limit and graph generation}{9}{subsection.2.3}%
 \contentsline {section}{\numberline {3}Literature review}{10}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Structure of the thesis}{10}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Page numbering}{11}{subsection.3.2}%
