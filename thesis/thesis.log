@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.8)  22 JUL 2024 14:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.8)  22 JUL 2024 15:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1614,7 +1614,7 @@ Package microtype Warning: I cannot find a spacing list for font
 (microtype)                `TS1/ntxtlf/m/n/12' (context: `nonfrench'). Switching off
 (microtype)                spacing for this font on input line 188.
 
-<doclicense-CC-by-nc-sa-88x31.pdf, id=131, 90.3375pt x 31.61812pt>
+<doclicense-CC-by-nc-sa-88x31.pdf, id=71, 90.3375pt x 31.61812pt>
 File: doclicense-CC-by-nc-sa-88x31.pdf Graphic file (type pdf)
 <use doclicense-CC-by-nc-sa-88x31.pdf>
 Package pdftex.def Info: doclicense-CC-by-nc-sa-88x31.pdf  used on input line 188.
@@ -1750,271 +1750,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 338--344
 [10
 
 ]
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.8pt on input line 450.
-LaTeX Font Info:    Trying to load font information for T1+fvm on input line 456.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/bera/t1fvm.fd
+
+LaTeX Warning: Reference `app:layout' on page 11 undefined on input line 369.
+
+
+LaTeX Warning: Reference `app:reference' on page 11 undefined on input line 370.
+
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
+(Font)              scaled to size 12.0pt on input line 377.
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 378.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/bera/t1fvm.fd
 File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 9.0pt on input line 456.
+(Font)              scaled to size 9.0pt on input line 378.
 
 
-[11]
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.6pt on input line 513.
+[11
 
-
-[12]
-<./ledspole.jpg, id=253, 1204.5pt x 889.3225pt>
-File: ./ledspole.jpg Graphic file (type jpg)
-<use ./ledspole.jpg>
-Package pdftex.def Info: ./ledspole.jpg  used on input line 542.
-(pdftex.def)             Requested size: 192.6688pt x 142.26378pt.
-<curves.pdf, id=254, 406.51875pt x 305.14pt>
-File: curves.pdf Graphic file (type pdf)
-<use curves.pdf>
-Package pdftex.def Info: curves.pdf  used on input line 549.
-(pdftex.def)             Requested size: 189.5317pt x 142.26378pt.
-
-
-[13 <./ledspole.jpg> <./curves.pdf>]
-
-[14]
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 652.
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 10.0pt on input line 652.
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 7.3pt on input line 652.
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 5.5pt on input line 652.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 10.0pt on input line 652.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 7.3pt on input line 652.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 5.5pt on input line 652.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 10.0pt on input line 652.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 7.3pt on input line 652.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 5.5pt on input line 652.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 10.0pt on input line 652.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 7.3pt on input line 652.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 5.5pt on input line 652.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 10.0pt on input line 652.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 7.3pt on input line 652.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 5.5pt on input line 652.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 10.0pt on input line 652.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 7.3pt on input line 652.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 5.5pt on input line 652.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 10.0pt on input line 652.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 7.3pt on input line 652.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 5.5pt on input line 652.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 10.0pt on input line 652.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 7.3pt on input line 652.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 5.5pt on input line 652.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 7.3pt on input line 652.
-
-
-LaTeX Warning: Reference `app:reference' on page 15 undefined on input line 654.
-
-
-LaTeX Warning: Citation `aaltolib' on page 15 undefined on input line 663.
-
-
-LaTeX Warning: Reference `app:reference' on page 15 undefined on input line 663.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 661--665
-
- []
-
-
-LaTeX Warning: Citation `Kauranen' on page 15 undefined on input line 678.
-
-
-LaTeX Warning: Citation `Koblitz' on page 15 undefined on input line 678.
-
-
-LaTeX Warning: Citation `Koblitz' on page 15 undefined on input line 680.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 678--682
-
- []
-
-
-
-[15]
-
-LaTeX Warning: Citation `bcs' on page 16 undefined on input line 695.
-
-
-LaTeX Warning: Citation `Deschamps' on page 16 undefined on input line 695.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 695--697
-
- []
-
-
-LaTeX Warning: Citation `Sihvola' on page 16 undefined on input line 720.
-
-
-LaTeX Warning: Citation `Lindblom' on page 16 undefined on input line 720.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 720--722
-
- []
-
-
-LaTeX Warning: Citation `Miinusmaa' on page 16 undefined on input line 735.
-
-
-LaTeX Warning: Citation `Lonnqvist' on page 16 undefined on input line 735.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 735--737
-
- []
-
-
-
-[16]
-
-LaTeX Warning: Citation `sfs' on page 17 undefined on input line 750.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 750--752
-
- []
-
-
-LaTeX Warning: Citation `interview' on page 17 undefined on input line 764.
-
-
-LaTeX Warning: Citation `Ribeiro' on page 17 undefined on input line 784.
-
-
-LaTeX Warning: Citation `kone' on page 17 undefined on input line 784.
-
-
-LaTeX Warning: Citation `Ribeiro' on page 17 undefined on input line 786.
-
-
-LaTeX Warning: Citation `Stieber' on page 17 undefined on input line 786.
-
-
-LaTeX Warning: Citation `kone' on page 17 undefined on input line 788.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 784--792
-
- []
-
-
-
-[17]
-
-LaTeX Warning: Citation `Adida' on page 18 undefined on input line 810.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 810--812
-
- []
-
-
-LaTeX Warning: Citation `webpage' on page 18 undefined on input line 814.
-
-
-
-[18]
-
-[19
-
-]
-
-[20
-
-]
-
-[21
-
-]
-
-LaTeX Warning: Reference `app:reference' on page 22 undefined on input line 893.
-
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 12.0pt on input line 900.
-
-
-[22
-
-]
-<./linediagram.pdf, id=330, 553.85318pt x 252.33182pt>
-File: ./linediagram.pdf Graphic file (type pdf)
-<use ./linediagram.pdf>
-Package pdftex.def Info: ./linediagram.pdf  used on input line 960.
-(pdftex.def)             Requested size: 193.59798pt x 88.20354pt.
-
-
-[23
-
- <./linediagram.pdf>]
-
-LaTeX Warning: Citation `Bringhurst' on page 24 undefined on input line 999.
-
-
-LaTeX Warning: Citation `Wikilinelength' on page 24 undefined on input line 999.
-
-
-LaTeX Warning: Citation `Unna' on page 24 undefined on input line 1006.
-
-
-LaTeX Warning: Citation `Dyson' on page 24 undefined on input line 1027.
-
-
-LaTeX Warning: Citation `Shaik' on page 24 undefined on input line 1027.
-
-
-LaTeX Warning: Citation `Wikilinelength' on page 24 undefined on input line 1031.
-
-
-LaTeX Warning: Citation `enwiki:1026690618' on page 24 undefined on input line 1044.
-
-
-
-[24
-
-]
-
-LaTeX Warning: Citation `aaltovisual' on page 25 undefined on input line 1048.
-
-
-
-[25]
-
-[26] (./thesis.aux)
+] (./thesis.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2020/03/25>
@@ -2024,21 +1778,21 @@ L3 programming layer <2020/03/25>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 35AA3A3D62090B25D3A34C1A9E147F7D;4685.
+(rerunfilecheck)             Checksum: 3914533F5DED5C6800C0E2006B8B59BA;1867.
  ) 
 Here is how much of TeX's memory you used:
- 37709 strings out of 473584
- 666029 string characters out of 5728335
- 1941905 words of memory out of 5000000
- 59669 multiletter control sequences out of 15000+600000
- 658231 words of font info for 245 fonts, out of 8000000 for 9000
+ 37428 strings out of 473584
+ 661092 string characters out of 5728335
+ 1942905 words of memory out of 5000000
+ 59527 multiletter control sequences out of 15000+600000
+ 628553 words of font info for 172 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  132i,12n,135p,1087b,2556s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on thesis.pdf (26 pages, 681807 bytes).
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
+Output written on thesis.pdf (11 pages, 207322 bytes).
 PDF statistics:
- 442 PDF objects out of 1000 (max. 8388607)
- 378 compressed objects within 4 object streams
- 92 named destinations out of 1000 (max. 500000)
- 49421 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 218 PDF objects out of 1000 (max. 8388607)
+ 181 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 41094 words of extra memory for PDF output out of 42996 (max. 10000000)
 
