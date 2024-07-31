@@ -285,9 +285,52 @@ Naive generation: generate the adj matrix on rank 0 and scatter it to all other 
 
 Distributed generation: Each rank generates a number of rows of the adj matrix. And share the result with the destination peer with MPI\_Alltoall. It saves the memory for graph storage and allows running larger graphs.
 
+% \subsection{MPI\_Alltoall}
+% Use MPI\_Alltoall to simulate all node sending messages to neighbors
+% \clearpage
+
 \section{CPU Algorithm performance}
-\subsection{compatibility}
-With 8 threads 
+\subsection{$A$ time composition}
+8 processes, 16G memory each. As the number of vertices goes up, local computation becomes the dominant part in the time composition.
+\begin{figure}[h]
+	\centering
+		\includegraphics[height=89mm]{./figs/mpi_time_composition.pdf}
+	\caption{$A$ time composition implemented by MPI}
+	\label{appfig:refraction}
+\end{figure}
+
+TODO insert time composition by iteration chart.
+
+TODO insert graph with 16 processes
+
+The time decreases as the number of iteration goes up.
+
+\subsection{performance compared to sequential algorithm}
+Prim's algorithm is used as the sequential algorithm to compare the performance of $A$. It is implemented also in C++ and runs on a single thread on Puhti, with 16G memory.
+
+With 16G memory, prim's algorithm can process 32678 vertices (but not 65356) and $32678 \times 32677 / 2 (5.33 \times 10 ^ 8)$ edges using 88 seconds. The bottleneck for prim's algorithm to process more edges is to fit the graph to the memory.
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[height=89mm]{./figs/prim's_cpp.pdf}
+	\caption{Prim's algorithm performance}
+	\label{appfig:refraction}
+\end{figure}
+
+Because of the distributed nature of $A$, larger graphs can be fit into the memory as the number of threads increases. The program needs more memory for MPI's buffer compared to the prim's algorithms. 
+% how many edges can it process
+% can it be faster than the sequential algorithm
+% Single node performance
+\subsection{Scalability}
+% MPI vs local computation
+% iteration time (unbalanced workload)
+% how well it scales with the number of nodes
+% Questioning the time complexity
+% bandwidth and optimization
+
+\subsection{Python vs C++}
+
+
 
 
 \clearpage

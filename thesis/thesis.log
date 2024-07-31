@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.8)  24 JUL 2024 18:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.8)  31 JUL 2024 11:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1331,7 +1331,11 @@ Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.cfg
 File: csquotes.cfg 
-)) (./thesis.aux)
+)) (./thesis.aux
+
+LaTeX Warning: Label `appfig:refraction' multiply defined.
+
+)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 99.
@@ -1614,7 +1618,7 @@ Package microtype Warning: I cannot find a spacing list for font
 (microtype)                `TS1/ntxtlf/m/n/12' (context: `nonfrench'). Switching off
 (microtype)                spacing for this font on input line 111.
 
-<doclicense-CC-by-nc-sa-88x31.pdf, id=79, 90.3375pt x 31.61812pt>
+<doclicense-CC-by-nc-sa-88x31.pdf, id=91, 90.3375pt x 31.61812pt>
 File: doclicense-CC-by-nc-sa-88x31.pdf Graphic file (type pdf)
 <use doclicense-CC-by-nc-sa-88x31.pdf>
 Package pdftex.def Info: doclicense-CC-by-nc-sa-88x31.pdf  used on input line 111.
@@ -1742,33 +1746,58 @@ Underfull \hbox (badness 10000) in paragraph at lines 271--276
  []
 
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 293.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 293.
+
+<./figs/mpi_time_composition.pdf, id=165, 409.62848pt x 327.20317pt>
+File: ./figs/mpi_time_composition.pdf Graphic file (type pdf)
+<use ./figs/mpi_time_composition.pdf>
+Package pdftex.def Info: ./figs/mpi_time_composition.pdf  used on input line 297.
+(pdftex.def)             Requested size: 317.03375pt x 253.22952pt.
+
 
 [9
 
 ]
+<./figs/prim's_cpp.pdf, id=171, 608.06236pt x 393.98067pt>
+File: ./figs/prim's_cpp.pdf Graphic file (type pdf)
+<use ./figs/prim's_cpp.pdf>
+Package pdftex.def Info: ./figs/prim's_cpp.pdf  used on input line 315.
+(pdftex.def)             Requested size: 390.83794pt x 253.22952pt.
 
-[10]
 
-[11
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[10 <./figs/mpi_time_composition.pdf>]
+
+[11 <./figs/prim's_cpp.pdf>]
+
+[12
 
 ]
 
-LaTeX Warning: Reference `app:layout' on page 12 undefined on input line 310.
+LaTeX Warning: Reference `app:layout' on page 13 undefined on input line 353.
 
 
-LaTeX Warning: Reference `app:reference' on page 12 undefined on input line 311.
+LaTeX Warning: Reference `app:reference' on page 13 undefined on input line 354.
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 12.0pt on input line 318.
-LaTeX Font Info:    Trying to load font information for T1+fvm on input line 319.
+(Font)              scaled to size 12.0pt on input line 361.
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 362.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/bera/t1fvm.fd
 File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 9.0pt on input line 319.
+(Font)              scaled to size 9.0pt on input line 362.
 
 
-[12
+[13
 
 ] (./thesis.aux)
  ***********
@@ -1779,22 +1808,25 @@ L3 programming layer <2020/03/25>
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 2B60EBCBDAC45E19B7D3F3852283584D;2287.
+(rerunfilecheck)             Checksum: FE300DAE6D7842998EF0FE0E45A6F0DA;2919.
  ) 
 Here is how much of TeX's memory you used:
- 37451 strings out of 473584
- 661461 string characters out of 5728335
+ 37483 strings out of 473584
+ 662284 string characters out of 5728335
  1943905 words of memory out of 5000000
- 59531 multiletter control sequences out of 15000+600000
+ 59557 multiletter control sequences out of 15000+600000
  630252 words of font info for 180 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  132i,12n,135p,1087b,2556s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on thesis.pdf (12 pages, 210790 bytes).
+Output written on thesis.pdf (13 pages, 235398 bytes).
 PDF statistics:
- 243 PDF objects out of 1000 (max. 8388607)
- 204 compressed objects within 3 object streams
- 39 named destinations out of 1000 (max. 500000)
- 41110 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 342 PDF objects out of 1000 (max. 8388607)
+ 236 compressed objects within 3 object streams
+ 45 named destinations out of 1000 (max. 500000)
+ 41144 words of extra memory for PDF output out of 42996 (max. 10000000)
 

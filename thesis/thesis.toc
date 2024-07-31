@@ -17,6 +17,9 @@
 \contentsline {subsection}{\numberline {2.1}Congested Clique simulation}{9}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Memory limit and graph generation}{9}{subsection.2.2}%
 \contentsline {section}{\numberline {3}CPU Algorithm performance}{10}{section.3}%
-\contentsline {subsection}{\numberline {3.1}compatibility}{10}{subsection.3.1}%
-\contentsline {section}{\numberline {4}Cuda implementation}{11}{section.4}%
-\contentsline {section}{References}{12}{section*.7}%
+\contentsline {subsection}{\numberline {3.1}$A$ time composition}{10}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}performance compared to sequential algorithm}{10}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Scalability}{10}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Python vs C++}{10}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Cuda implementation}{12}{section.4}%
+\contentsline {section}{References}{13}{section*.9}%

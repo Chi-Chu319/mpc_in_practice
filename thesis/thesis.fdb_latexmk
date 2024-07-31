@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1721834586.48057 "/media/tianxing/Shared Volume/studies/aalto_MSc/HPC_thesis/mpc_in_practice/thesis/thesis.tex" "thesis.pdf" "thesis" 1721834587.81913 0
-  "/media/tianxing/Shared Volume/studies/aalto_MSc/HPC_thesis/mpc_in_practice/thesis/thesis.tex" 1721834586.29083 14470 502278cb7d4e839df9c63ca85efa02ba ""
+["pdflatex"] 1722413965.23754 "/media/tianxing/Shared Volume/studies/aalto_MSc/HPC_thesis/mpc_in_practice/thesis/thesis.tex" "thesis.pdf" "thesis" 1722413966.62775 0
+  "/media/tianxing/Shared Volume/studies/aalto_MSc/HPC_thesis/mpc_in_practice/thesis/thesis.tex" 1722413964.97803 16221 f8808e9dc53b8862e9cb88bffafd6f15 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1698694482 2914 fdbc4a54b9bc76f4551b5303f2737d33 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1422827479 2083 60e36f8eac802fcaf19eabe2633b406e ""
@@ -263,12 +263,14 @@
   "/usr/local/texlive/2024/texmf.cnf" 1720464911.35695 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
   "aaltologo.sty" 1720535889.87799 477847 aacf8b5f78619a0f8308b97e08a728f9 ""
   "aaltothesis.cls" 1720443950.90303 45844 7b41b7de261486700e90553dd952b629 ""
-  "pdfa.xmpi" 1721834586.91882 6356 4e938c36658e56f615c9ca08d43b5d28 "pdflatex"
-  "thesis.aux" 1721834587.67081 2516 24c2b3124443d05dd95008be73cb9e8e "pdflatex"
-  "thesis.out" 1721834587.67481 2287 2b60ebcbdac45e19b7d3f3852283584d "pdflatex"
-  "thesis.tex" 1721834586.29083 14470 502278cb7d4e839df9c63ca85efa02ba ""
-  "thesis.toc" 1721834587.67481 1308 3ea0e927ee2fa4219b1b4575f33558c9 "pdflatex"
-  "thesis.xmpdata" 1721834587.27882 667 aa38724ddc5ee4924e453ce48f20e772 "pdflatex"
+  "figs/mpi_time_composition.pdf" 1722335343.71715 13556 81c5b41fa2035b4fa07ad0032bed5533 ""
+  "figs/prim's_cpp.pdf" 1721996663.48866 14381 ec921f02aefae7faa812a58336a8d950 ""
+  "pdfa.xmpi" 1722413965.67002 6356 3bbfd12b9e603a35b9cd640aa4008b16 "pdflatex"
+  "thesis.aux" 1722413966.46201 3473 7bf26ef815b128f640d8375d728f0789 "pdflatex"
+  "thesis.out" 1722413966.46601 2919 fe300dae6d7842998ef0fe0e45a6f0da "pdflatex"
+  "thesis.tex" 1722413964.97803 16221 f8808e9dc53b8862e9cb88bffafd6f15 ""
+  "thesis.toc" 1722413966.46601 1584 5eb40afcec8067cb33d18fe6c151f1d3 "pdflatex"
+  "thesis.xmpdata" 1722413966.03402 667 aa38724ddc5ee4924e453ce48f20e772 "pdflatex"
   (generated)
   "pdfa.xmpi"
   "thesis.aux"
