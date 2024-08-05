@@ -2,5 +2,5 @@
 \Author {Tianxing Wu}
 \Copyright {\textcopyright \ 2024. This work is licensed under a Creative Commons "Attribution-NonCommercial-ShareAlike 4.0 International" (BY-NC-SA 4.0) license.}
 \CopyrightURL {https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en}
-\Subject { Purpose:\\ The purpose of this thesis is to study how congested clique algorithms perform on modern supercomputers.\\ Methodology:\\ Studied how an MST algorithm performs on the Puhti supercomputer. The congested clique setting is simulated with MPI\_and CUDA.\\ Result:\\ }
+\Subject { The purpose of this thesis is to study how congested clique algorithms perform on modern supercomputers.\\ A representative algorithm $MST\_\log \log {n}$ for Congested Clique is studied. The algorithm is implemented on Puhti, a Finnish supercomputer hosted by CSC. The congested clique setting is simulated with the Message Passing Interface (MPI) and CUDA.\\ MPI is a message-passing library interface specification that uses a message-passing model for parallel computing.\\ result: TODO }
 \Keywords {Distributed computing, Supercomputing, Congested clique, MST, Puhti, MPI, CUDA, MPC}

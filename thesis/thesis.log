@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.8)  31 JUL 2024 11:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.8)  5 AUG 2024 22:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1304,15 +1304,15 @@ Package doclicense Warning: The pdfx package was detected. Therefore the mechani
 (/usr/local/texlive/2024/texmf-dist/tex/latex/doclicense/doclicense-english.ldf
 File: doclicense-english.ldf 
 ))
-Package hyperref Info: Option `unicode' set `true' on input line 99.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 99.
-Package hyperref Info: Option `colorlinks' set `true' on input line 99.
-LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line 99.
+Package hyperref Info: Option `unicode' set `true' on input line 100.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 100.
+Package hyperref Info: Option `colorlinks' set `true' on input line 100.
+LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line 100.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/t1ntxtlf.fd
 File: t1ntxtlf.fd 2021/05/24 v1.1 font definition file for T1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 99.
+(Font)              scaled to size 12.0pt on input line 100.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/ccicons/ccicons.sty
 Package: ccicons 2017/10/30 v1.6 LaTeX support for Creative Commons icons
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.sty
@@ -1331,51 +1331,47 @@ Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.cfg
 File: csquotes.cfg 
-)) (./thesis.aux
-
-LaTeX Warning: Label `appfig:refraction' multiply defined.
-
-)
+)) (./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 99.
-LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 99.
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 100.
+LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 100.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 99.
-LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 99.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 100.
+LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 100.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 99.
-LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 99.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 100.
+LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 100.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 99.
-LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 99.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 100.
+LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 100.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    ... okay on input line 100.
  (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count359
@@ -1395,7 +1391,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 99.
+Package hyperref Info: Link coloring ON on input line 100.
  (./thesis.out) (./thesis.out)
 \@outlinefile=\write5
 \openout5 = `thesis.out'.
@@ -1435,18 +1431,18 @@ Package hyperref Info: Link coloring ON on input line 99.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 99.
-Package microtype Info: Applying patch `item' on input line 99.
-Package microtype Info: Applying patch `toc' on input line 99.
-Package microtype Info: Applying patch `eqnum' on input line 99.
-Package microtype Info: Applying patch `footnote' on input line 99.
-Package microtype Info: Applying patch `verbatim' on input line 99.
+LaTeX Info: Redefining \microtypecontext on input line 100.
+Package microtype Info: Applying patch `item' on input line 100.
+Package microtype Info: Applying patch `toc' on input line 100.
+Package microtype Info: Applying patch `eqnum' on input line 100.
+Package microtype Info: Applying patch `footnote' on input line 100.
+Package microtype Info: Applying patch `verbatim' on input line 100.
 Package microtype Info: Generating PDF output.
 Package microtype Info: No character protrusion.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 99.
+LaTeX Info: Redefining \showhyphens on input line 100.
 Package microtype Info: Tracking enabled.
 Package microtype Info: Using default tracking set `smallcaps'.
 Package microtype Info: Adjustment of interword spacing enabled.
@@ -1468,8 +1464,8 @@ Package caption Info: End \AtBeginDocument code.
 
 \c@mv@tabular=\count365
 \c@mv@boldtabular=\count366
-LaTeX Info: Command `\dddot' is already robust on input line 99.
-LaTeX Info: Command `\ddddot' is already robust on input line 99.
+LaTeX Info: Command `\dddot' is already robust on input line 100.
+LaTeX Info: Command `\ddddot' is already robust on input line 100.
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -1502,94 +1498,94 @@ LaTeX Info: Command `\ddddot' is already robust on input line 99.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 103.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 104.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 103.
+(Font)              scaled to size 11.39996pt on input line 104.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 23.63593pt on input line 103.
+(Font)              scaled to size 23.63593pt on input line 104.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 103.
+(Font)              scaled to size 13.67995pt on input line 104.
 
-Overfull \hbox (120.92422pt too wide) in paragraph at lines 103--103
+Overfull \hbox (120.92422pt too wide) in paragraph at lines 104--104
 [] 
  []
 
 
-Overfull \hbox (149.37697pt too wide) in paragraph at lines 103--103
+Overfull \hbox (149.37697pt too wide) in paragraph at lines 104--104
 [][] 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 103.
-LaTeX Font Info:    Trying to load font information for OT1+minntx on input line 103.
+(Font)              scaled to size 13.67995pt on input line 104.
+LaTeX Font Info:    Trying to load font information for OT1+minntx on input line 104.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/ot1minntx.fd
 File: ot1minntx.fd 2023/09/09 v1.1 font definition file for OT1/minntx
 )
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 12.0pt on input line 103.
+(Font)              scaled to size 12.0pt on input line 104.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 8.8pt on input line 103.
+(Font)              scaled to size 8.8pt on input line 104.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 6.6pt on input line 103.
+(Font)              scaled to size 6.6pt on input line 104.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 12.0pt on input line 103.
+(Font)              scaled to size 12.0pt on input line 104.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 8.8pt on input line 103.
+(Font)              scaled to size 8.8pt on input line 104.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 6.6pt on input line 103.
+(Font)              scaled to size 6.6pt on input line 104.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 12.0pt on input line 103.
+(Font)              scaled to size 12.0pt on input line 104.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 8.8pt on input line 103.
+(Font)              scaled to size 8.8pt on input line 104.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.6pt on input line 103.
+(Font)              scaled to size 6.6pt on input line 104.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 12.0pt on input line 103.
+(Font)              scaled to size 12.0pt on input line 104.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 8.8pt on input line 103.
+(Font)              scaled to size 8.8pt on input line 104.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.6pt on input line 103.
-LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 103.
+(Font)              scaled to size 6.6pt on input line 104.
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 104.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/gelasiomath/untxmia.fd
 File: untxmia.fd 2024/04/09 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 12.0pt on input line 103.
+(Font)              scaled to size 12.0pt on input line 104.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 8.8pt on input line 103.
+(Font)              scaled to size 8.8pt on input line 104.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.6pt on input line 103.
-LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 103.
+(Font)              scaled to size 6.6pt on input line 104.
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 104.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 12.0pt on input line 103.
+(Font)              scaled to size 12.0pt on input line 104.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 8.8pt on input line 103.
+(Font)              scaled to size 8.8pt on input line 104.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.6pt on input line 103.
-LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 103.
+(Font)              scaled to size 6.6pt on input line 104.
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 104.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 12.0pt on input line 103.
+(Font)              scaled to size 12.0pt on input line 104.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 8.8pt on input line 103.
+(Font)              scaled to size 8.8pt on input line 104.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.6pt on input line 103.
+(Font)              scaled to size 6.6pt on input line 104.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 12.0pt on input line 103.
+(Font)              scaled to size 12.0pt on input line 104.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 8.8pt on input line 103.
+(Font)              scaled to size 8.8pt on input line 104.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 6.6pt on input line 103.
+(Font)              scaled to size 6.6pt on input line 104.
 
-Overfull \hbox (120.92422pt too wide) in paragraph at lines 103--103
+Overfull \hbox (120.92422pt too wide) in paragraph at lines 104--104
 $[]$ 
  []
 
@@ -1606,22 +1602,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 {/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 111.
+LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 112.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 )
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 111.
+(Font)              scaled to size 12.0pt on input line 112.
 
 
 Package microtype Warning: I cannot find a spacing list for font
 (microtype)                `TS1/ntxtlf/m/n/12' (context: `nonfrench'). Switching off
-(microtype)                spacing for this font on input line 111.
+(microtype)                spacing for this font on input line 112.
 
-<doclicense-CC-by-nc-sa-88x31.pdf, id=91, 90.3375pt x 31.61812pt>
+<doclicense-CC-by-nc-sa-88x31.pdf, id=123, 90.3375pt x 31.61812pt>
 File: doclicense-CC-by-nc-sa-88x31.pdf Graphic file (type pdf)
 <use doclicense-CC-by-nc-sa-88x31.pdf>
-Package pdftex.def Info: doclicense-CC-by-nc-sa-88x31.pdf  used on input line 111.
+Package pdftex.def Info: doclicense-CC-by-nc-sa-88x31.pdf  used on input line 112.
 (pdftex.def)             Requested size: 120.0pt x 42.0004pt.
 
 
@@ -1630,7 +1626,11 @@ Package pdftex.def Info: doclicense-CC-by-nc-sa-88x31.pdf  used on input line 11
 
 {/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc} </usr/local/texlive/2024/texmf-dist/tex/latex/doclicense/images/doclicense-CC-by-nc-sa-88x31.pdf>]
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 124.
+(Font)              scaled to size 11.39996pt on input line 125.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.8pt on input line 126.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.6pt on input line 126.
 
 
 
@@ -1644,15 +1644,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 
-]
+{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 17.28pt on input line 144.
+(Font)              scaled to size 17.28pt on input line 145.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 17.28pt on input line 144.
+(Font)              scaled to size 17.28pt on input line 145.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 16.41594pt on input line 144.
+(Font)              scaled to size 16.41594pt on input line 145.
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
@@ -1671,133 +1671,168 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 
 [5]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 192.
+(Font)              scaled to size 14.4pt on input line 170.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 14.4pt on input line 192.
+(Font)              scaled to size 14.4pt on input line 170.
 
 
 [6]
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 14.4pt on input line 251.
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 10.5pt on input line 251.
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 7.9pt on input line 251.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 14.4pt on input line 251.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 10.5pt on input line 251.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 7.9pt on input line 251.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 14.4pt on input line 251.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 10.5pt on input line 251.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 7.9pt on input line 251.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 14.4pt on input line 251.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 10.5pt on input line 251.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 7.9pt on input line 251.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 14.4pt on input line 251.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 10.5pt on input line 251.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 7.9pt on input line 251.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 14.4pt on input line 251.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 10.5pt on input line 251.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 7.9pt on input line 251.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 14.4pt on input line 251.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 10.5pt on input line 251.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 7.9pt on input line 251.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 14.4pt on input line 251.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 10.5pt on input line 251.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 7.9pt on input line 251.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 251.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 251.
-
-
 
 [7
 
-{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}]
+]
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 14.4pt on input line 232.
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 10.5pt on input line 232.
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 7.9pt on input line 232.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 14.4pt on input line 232.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 10.5pt on input line 232.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 7.9pt on input line 232.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 14.4pt on input line 232.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 10.5pt on input line 232.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 7.9pt on input line 232.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 14.4pt on input line 232.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 10.5pt on input line 232.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 7.9pt on input line 232.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 14.4pt on input line 232.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 10.5pt on input line 232.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 7.9pt on input line 232.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 14.4pt on input line 232.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 10.5pt on input line 232.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 7.9pt on input line 232.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 14.4pt on input line 232.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 10.5pt on input line 232.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 7.9pt on input line 232.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 14.4pt on input line 232.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 10.5pt on input line 232.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 7.9pt on input line 232.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 9.97496pt on input line 232.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 7.50496pt on input line 232.
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 271--276
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 232.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\log' on input line 232.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\log' on input line 232.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 232.
+
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 236.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/bera/t1fvm.fd
+File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
+)
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 9.0pt on input line 236.
+
+
+[8
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 264--270
 
  []
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 293.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 293.
-
-<./figs/mpi_time_composition.pdf, id=165, 409.62848pt x 327.20317pt>
-File: ./figs/mpi_time_composition.pdf Graphic file (type pdf)
-<use ./figs/mpi_time_composition.pdf>
-Package pdftex.def Info: ./figs/mpi_time_composition.pdf  used on input line 297.
-(pdftex.def)             Requested size: 317.03375pt x 253.22952pt.
 
 
 [9
 
 ]
-<./figs/prim's_cpp.pdf, id=171, 608.06236pt x 393.98067pt>
+
+[10]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 311.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\log' on input line 311.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\log' on input line 311.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 311.
+
+<./figs/mpi_time_composition.pdf, id=218, 409.62848pt x 325.2741pt>
+File: ./figs/mpi_time_composition.pdf Graphic file (type pdf)
+<use ./figs/mpi_time_composition.pdf>
+Package pdftex.def Info: ./figs/mpi_time_composition.pdf  used on input line 315.
+(pdftex.def)             Requested size: 250.82306pt x 199.16928pt.
+<./figs/prim's_cpp.pdf, id=220, 608.06236pt x 393.98067pt>
 File: ./figs/prim's_cpp.pdf Graphic file (type pdf)
 <use ./figs/prim's_cpp.pdf>
-Package pdftex.def Info: ./figs/prim's_cpp.pdf  used on input line 315.
-(pdftex.def)             Requested size: 390.83794pt x 253.22952pt.
-
+Package pdftex.def Info: ./figs/prim's_cpp.pdf  used on input line 335.
+(pdftex.def)             Requested size: 307.39844pt x 199.16928pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[10 <./figs/mpi_time_composition.pdf>]
+[11
 
-[11 <./figs/prim's_cpp.pdf>]
+ <./figs/mpi_time_composition.pdf>]
+<./figs/prim's_vs_A.pdf, id=261, 614.44559pt x 393.98067pt>
+File: ./figs/prim's_vs_A.pdf Graphic file (type pdf)
+<use ./figs/prim's_vs_A.pdf>
+Package pdftex.def Info: ./figs/prim's_vs_A.pdf  used on input line 349.
+(pdftex.def)             Requested size: 310.6254pt x 199.16928pt.
 
-[12
+
+[12 <./figs/prim's_cpp.pdf> <./figs/prim's_vs_A.pdf>]
+
+[13
 
 ]
 
-LaTeX Warning: Reference `app:layout' on page 13 undefined on input line 353.
+[14
+
+]
+
+LaTeX Warning: Reference `app:layout' on page 15 undefined on input line 382.
 
 
-LaTeX Warning: Reference `app:reference' on page 13 undefined on input line 354.
+LaTeX Warning: Reference `app:reference' on page 15 undefined on input line 383.
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 12.0pt on input line 361.
-LaTeX Font Info:    Trying to load font information for T1+fvm on input line 362.
-(/usr/local/texlive/2024/texmf-dist/tex/latex/bera/t1fvm.fd
-File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
-)
-LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 9.0pt on input line 362.
+(Font)              scaled to size 12.0pt on input line 390.
 
 
-[13
+[15
 
 ] (./thesis.aux)
  ***********
@@ -1808,25 +1843,22 @@ L3 programming layer <2020/03/25>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: FE300DAE6D7842998EF0FE0E45A6F0DA;2919.
+(rerunfilecheck)             Checksum: A9D60F070A920082835E457B20D2C949;4317.
  ) 
 Here is how much of TeX's memory you used:
- 37483 strings out of 473584
- 662284 string characters out of 5728335
- 1943905 words of memory out of 5000000
- 59557 multiletter control sequences out of 15000+600000
- 630252 words of font info for 180 fonts, out of 8000000 for 9000
+ 37564 strings out of 473584
+ 663672 string characters out of 5728335
+ 1944905 words of memory out of 5000000
+ 59585 multiletter control sequences out of 15000+600000
+ 643278 words of font info for 207 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  132i,12n,135p,1087b,2556s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on thesis.pdf (13 pages, 235398 bytes).
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
+Output written on thesis.pdf (15 pages, 266936 bytes).
 PDF statistics:
- 342 PDF objects out of 1000 (max. 8388607)
- 236 compressed objects within 3 object streams
- 45 named destinations out of 1000 (max. 500000)
- 41144 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 445 PDF objects out of 1000 (max. 8388607)
+ 298 compressed objects within 3 object streams
+ 59 named destinations out of 1000 (max. 500000)
+ 49405 words of extra memory for PDF output out of 51595 (max. 10000000)
 
