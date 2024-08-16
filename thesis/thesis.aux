@@ -1,5 +1,19 @@
 \relax 
 \providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \providecommand\babel@aux[2]{}
@@ -25,7 +39,7 @@
 \citation{PuhtiDoc}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Preliminaries}{8}{section.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Congested clique}{8}{subsection.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}The algorithm $MST\_\log \log {n}$}{8}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}The algorithm $MST\_\qopname  \relax o{log}\qopname  \relax o{log}{n}$}{8}{subsection.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}The super-computer Puhti}{8}{subsection.2.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4}MPI}{8}{subsection.2.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.5}CUDA}{8}{subsection.2.5}\protected@file@percent }
@@ -36,21 +50,26 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Union-find}{10}{subsection.3.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Random vertex partitioning}{10}{subsection.3.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Memory limit and graph generation}{10}{subsection.3.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}MPI Algorithm performance}{11}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}$MST\_\log \log {n}$ time composition}{11}{subsection.4.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces $MST\_\log \log {n}$ time composition implemented by MPI}}{11}{figure.caption.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}$MST\_\qopname  \relax o{log}\qopname  \relax o{log}{n}$ performance}{11}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Time composition}{11}{subsection.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces $MST\_\qopname  \relax o{log}\qopname  \relax o{log}{n}$ time composition with MPI on one node with 8 threads\relax }}{11}{figure.caption.7}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:mpi_time_composition}{{1}{11}{$\mstalgo $ time composition implemented by MPI}{figure.caption.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}performance compared to sequential algorithm}{11}{subsection.4.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Prim's algorithm performance}}{12}{figure.caption.8}\protected@file@percent }
-\newlabel{fig:prims_cpp}{{2}{12}{Prim's algorithm performance}{figure.caption.8}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Prim's algorithm compared to $MST\_\log \log {n}$ performance}}{12}{figure.caption.9}\protected@file@percent }
-\newlabel{fig:prims_vs_A}{{3}{12}{Prim's algorithm compared to $\mstalgo $ performance}{figure.caption.9}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Scalability}{12}{subsection.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Python vs C++}{12}{subsection.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Congested clique to CUDA}{13}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Congested Clique simulation}{13}{subsection.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}CUDA performance}{14}{section.6}\protected@file@percent }
+\newlabel{fig:mpi_composition_n1_t8}{{1}{11}{$\mstalgo $ time composition with MPI on one node with 8 threads\relax }{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces $MST\_\qopname  \relax o{log}\qopname  \relax o{log}{n}$ time composition with MPI on 8 nodes with one thread each\relax }}{12}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:mpi_composition_n8_t1}{{2}{12}{$\mstalgo $ time composition with MPI on 8 nodes with one thread each\relax }{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces $MST\_\qopname  \relax o{log}\qopname  \relax o{log}{n}$ strong scaling time composition for with 16384 vertices\relax }}{13}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:mpi_composition_strong_scaling_16384}{{3}{13}{$\mstalgo $ strong scaling time composition for with 16384 vertices\relax }{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces $MST\_\qopname  \relax o{log}\qopname  \relax o{log}{n}$ detailed time composition with MPI with 8 threads and 16384 vertices\relax }}{13}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:n1_t8_16384_details}{{4}{13}{$\mstalgo $ detailed time composition with MPI with 8 threads and 16384 vertices\relax }{figure.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Round-based time composition}{13}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Scalability}{13}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Comparison with prim's algorithm}{13}{subsection.4.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Prim's algorithm compared to $MST\_\qopname  \relax o{log}\qopname  \relax o{log}{n}$ performance\relax }}{14}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:prims_vs_A}{{5}{14}{Prim's algorithm compared to $\mstalgo $ performance\relax }{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Python vs C++}{14}{subsection.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Congested clique to CUDA}{15}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Congested Clique simulation}{15}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}CUDA performance}{16}{section.6}\protected@file@percent }
 \bibcite{MSTLogLogn}{1}
 \bibcite{powerCongestClique}{2}
 \bibcite{Puhti}{3}
@@ -59,6 +78,6 @@
 \bibcite{Slurm}{6}
 \bibcite{MPI}{7}
 \bibcite{OpenMPI}{8}
-\setcounter{NAllPages}{15}
-\@writefile{toc}{\contentsline {section}{References}{15}{section*.10}\protected@file@percent }
-\gdef \@abspage@last{15}
+\setcounter{NAllPages}{17}
+\@writefile{toc}{\contentsline {section}{References}{17}{section*.12}\protected@file@percent }
+\gdef \@abspage@last{17}

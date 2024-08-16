@@ -103,42 +103,15 @@ result: TODO
 %%
 \makecoverpage
 
-%% Typeset the copyright text.
-%% If you wish, you may leave out the copyright text from the human-readable
-%% page of the pdf file. This may seem like a attractive idea for the printed
-%% document especially if "Copyright (c) yyyy Eddie Engineer" is the only text
-%% on the page. However, the recommendation is to print this copyright text.
-%%
 \makecopyrightpage
 
 \clearpage
-%% Note that when writing your thesis in English, place the English abstract
-%% first followed by the possible Finnish or Swedish abstract.
 
-%% Abstract text
-%% All the details (name, title, etc.) on the abstract page appear as specified
-%% above. Add your abstarct text with paragraphs here to have paragraphs in the
-%% visible abstract page. Nonetheless, write the abstarct text without
-%% paragraphs in the macro \thesismacro so that it is added to the metadata as
-%% well.
-%%
 \begin{abstractpage}[english]
 	\abstracttext{}
 \end{abstractpage}
 
-%% The text in the \thesisabstract macro is stored in the macro \abstractext, so
-%% you can use the text metadata abstract directly as follows:
-%%
-%\begin{abstractpage}[english]
-%	\abstracttext{}
-%\end{abstractpage}
-
-%% Force a new page so that the possible Finnish or Swedish abstract does not
-%% begin on the same page
-%%
-%% Force new page so that the Swedish abstract starts from a new page
 \newpage
-
 
 \dothesispagenumbering{}
 
@@ -173,26 +146,15 @@ Otaniemi, 10 July 2024\\
 $\mstalgo$         & The algorithm described in \cite{MSTLogLogn} \\
 \end{tabular}
 
-
-%% \clearpage is similar to \newpage, but it also flushes the floats (figures
-%% and tables).
-%%
 \cleardoublepage
 
-%% Text body begins. Note that since the text body is mostly in Finnish the
-%% majority of comments are also in Finnish after this point. There is no point
-%% in explaining Finnish-language specific thesis conventions in English.
-%% This text will be translated to English soon.
-%%
 \section{Introduction}
 \label{sec:intro}
 
-%% Leave page number of the first page empty
-%% 
 \thispagestyle{empty}
 % TODO Why super computing, why it is important.\\
 % TODO What is the congested clique model.\\
-% TODO Relation between super computing and and the congested clique model.\\
+% TODO Relation between super computing and the congested clique model.\\
 % TODO Why MST, what is representative in the algo\\
 Congested Clique, described in \cite{powerCongestClique} is a mathematical model for distributed computing. It features $n$ inter-connected computers in a clique network, sending messages in a synchronized manner. In each round, each computer sends $O(\log{n})$ to each other computer. The computation efficiency is measured by the communication rounds. 
 In this work, the congested clique algorithm that solves the (Minimum spanning tree)$MST$ in $O(\log{\log{n}})$ rounds \cite{MSTLogLogn} is studied and implemented on the supercomputer Puhti \cite{Puhti}. We simulated the congested clique model with MPI and a CUDA GPU to run $\mstalgo$. 
@@ -245,8 +207,6 @@ The nodes are connected with a 100 Gbps HDR100 link, and the topology is a fat t
 \subsection{MPI}
 
 \subsection{CUDA}
-
-
 
 \clearpage
 
@@ -303,58 +263,83 @@ Naive generation: generate the adj matrix on rank 0 and scatter it to all other 
 
 Distributed generation: Each rank generates several rows of the adj matrix. And share the result with the destination peer with MPI\_Alltoall. It saves the memory for graph storage and allows the running of larger graphs.
 
-% \subsection{MPI\_Alltoall}
-% Use MPI\_Alltoall to simulate all nodes sending messages to neighbors
 \clearpage
 
-\section{MPI Algorithm performance}
-\subsection{$\mstalgo$ time composition}
-8 processes, 16G memory each. As the number of vertices goes up, local computation becomes the dominant part in the time composition.
-\begin{figure}[h]
-	\centering
-		\includegraphics[height=70mm]{./figs/mpi_time_composition.pdf}
-	\caption{$\mstalgo$ time composition implemented by MPI}
-	\label{fig:mpi_time_composition}
-\end{figure}
-
-TODO insert time composition by round chart.
-
-TODO insert graph with 16 processes
-
-The time decreases as the round number goes up. The dominant time in each round is the MPI\_Alltoall. Because it has the largest message size. 
-
-Each round, MPI time grows linear as the graph size grows. The local computation time has its bottleneck on sorting. So the MPI time grows slower than the local computation.
-
-\subsection{performance compared to sequential algorithm}
-Prim's algorithm is used as the sequential algorithm to compare the performance of $\mstalgo$. It is implemented also in C++ and runs on a single thread on Puhti, with 16G memory.
-
-With 16G memory, prim's algorithm can process 32678-vertex complete graph (but not 65356), which has $32678 \times 32677 / 2 (5.33 \times 10 ^ 8)$ edges, using 88 seconds (\ref{fig:prims_cpp}). The bottleneck for prim's algorithm to process more edges is to fit the graph to the memory.
+\section{$\mstalgo$ performance}
+\subsection{Time composition}
 
 \begin{figure}[h]
 	\centering
-		\includegraphics[height=70mm]{./figs/prim's_cpp.pdf}
-	\caption{Prim's algorithm performance}
-	\label{fig:prims_cpp}
+		\includegraphics[height=90mm]{./figs/mpi_composition_n1_t8.pdf}
+	\caption{$\mstalgo$ time composition with MPI on one node with 8 threads}
+	\label{fig:mpi_composition_n1_t8}
 \end{figure}
 
-Because of the distributed nature of $\mstalgo$, larger graphs can be fit into the memory as the number of threads increases. When working on graphs with the same size, the program needs more memory for MPI's buffer compared to the prim's algorithms. 
+Figure \ref{fig:mpi_composition_n1_t8} shows the time composition of $\mstalgo$ implemented with MPI with a different number of vertices. The hardware is fixed. There are 8 threads on a single node. Each thread has 16G memory for each. 
 
-As shown in \ref{fig:prims_vs_A}, with more than 16 threads, $\mstalgo$ can process 65536-vertex complete graph (but not 131072). And $\mstalgo$ outperforms the prim's algorithm by speed when there are more than $64$ threads.
+MPI communication is the communication time spent on MPI functions. Rank 0 computation time is the time step spent on step 4, where rank 0 is the only active thread and other threads are idle waiting. The thread computation time is the time threads spend on local computation excluding step 6. MPI communication resembles the communication time in the congested clique model. Thread computation + rank 0 computation together resemble the local computation time in the congested clique model.
 
-From \ref{fig:prims_vs_A} as the number of thread increases, the time taken by $\mstalgo$ decreases. When
-% Single node performance
+In the congested clique model, each machine is in charge of only one vertex in the graph. Whereas with CPU threads and MPI, simulating only one vertex on each thread will not scale well with the hardware constraints. Typically, CPU threads are powerful enough to process large amounts of edges. But the number of threads is limited. To simulate larger graphs, having a thread responsible for multiple vertices is necessary. 
 
+As the number of vertices goes up on the fixed hardware, the thread computation time composition decreases. The MPI time and rank 0 computation time composition decreases. When the number of vertices is small, MPI computation is the dominant factor in time consumption, while thread and rank 0 computation combined constitute less than 25\% percent of the time composition. When the number of vertices is large enough, the thread computation time becomes the dominant. 
+
+% Horizontally, the number of total vertices increases. The vertices are distributed evenly among the threads. So the number of vertices on each thread increases as the total number of vertices increases. 
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[height=90mm]{./figs/mpi_composition_n8_t1.pdf}
+	\caption{$\mstalgo$ time composition with MPI on 8 nodes with one thread each}
+	\label{fig:mpi_composition_n8_t1}
+\end{figure}
+
+Figure \ref{fig:mpi_composition_n8_t1} shows the same time composition of $\mstalgo$ as in Figure \ref{fig:mpi_composition_n1_t8}. But instead of having 8 threads on a single node, there are 8 nodes with one thread each. A similar time composition pattern can be observed. Together with \ref{fig:mpi_composition_n1_t8}, it shows that the time composition of $\mstalgo$ is not affected by how the threads are distributed. 
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[height=90mm]{./figs/strong_scale_16384_composition.pdf}
+	\caption{$\mstalgo$ strong scaling time composition for with 16384 vertices}
+	\label{fig:mpi_composition_strong_scaling_16384}
+\end{figure}
+
+Figure \ref{fig:mpi_composition_strong_scaling_16384} is a demonstration of how the time composition changes with a fixed number of vertices but a varying number of threads. Horizontally, the number of threads increases as the number of vertices on each thread decreases. There are 16384 vertices in total. The time composition pattern is similar to \ref{fig:mpi_composition_n1_t8}. For a fixed number of vertices, as there are more vertices on each thread and fewer threads in total, the thread computation time becomes the dominant factor compared to MPI communication time and rank 0 computation time. Whereas when there are more threads and fewer vertices on each thread, the MPI communication time becomes the dominant factor. 
+
+This concludes that for larger graphs, the fewer vertices on each thread, the more time is spent on MPI communication, which is more similar to the scenario of Congested Clique. On the opposite, the more vertices on each thread, the more time is spent on local computation, which is not similar to the scenario of Congested Clique. 
+
+\subsection{Round-based time composition}
+\begin{figure}[h]
+	\centering
+		\includegraphics[height=25mm]{./figs/n1_t8_16384_details.png}
+	\caption{$\mstalgo$ detailed time composition with MPI with 8 threads and 16384 vertices}
+	\label{fig:n1_t8_16384_details}
+\end{figure}
+
+Figure \ref{fig:n1_t8_16384_details} is a detailed time composition of $\mstalgo$ with MPI with 8 threads on a single node and 16384 vertices. $mstalgo$ ran for 3 rounds. $t\_mpi$ is the total time spent on MPI communication in a round. It is a sum $comm0$, $comm1$, $comm2$, $comm3$ and, $comm4$. 
+
+\subsection{Scalability}
+
+
+\subsection{Comparison with prim's algorithm}
 \begin{figure}[h]
 	\centering
 		\includegraphics[height=70mm]{./figs/prim's_vs_A.pdf}
 	\caption{Prim's algorithm compared to $\mstalgo$ performance}
 	\label{fig:prims_vs_A}
 \end{figure}
-\subsection{Scalability}
+Prim's algorithm is used as the sequential algorithm to compare the performance of $\mstalgo$. It is implemented also in C++ and runs on a single thread on Puhti, with 16G memory.
+
+With 16G memory, prim's algorithm can process 32678-vertex complete graph (but not 65356), which has $32678 \times 32677 / 2 (5.33 \times 10 ^ 8)$ edges, using 88 seconds (). The bottleneck for prim's algorithm to process more edges is to fit the graph to the memory.
+
+Because of the distributed nature of $\mstalgo$, larger graphs can be fit into the memory as the number of threads increases. When working on graphs with the same size, the program needs more memory for MPI's buffer compared to the prim's algorithms. 
+
+As shown in \ref{fig:prims_vs_A}, with more than 16 threads, $\mstalgo$ can process 65536-vertex complete graph (but not 131072). And $\mstalgo$ outperforms the prim's algorithm by speed when there are more than $64$ threads.
+
+From \ref{fig:prims_vs_A} as the number of threads increases, the time taken by $\mstalgo$ decreases. When
+% Single node performance
+
+
 % how well it scales with the number of nodes
 % Questioning the time complexity
 % bandwidth and optimization
-
 \subsection{Python vs C++}
 
 \clearpage
@@ -372,19 +357,6 @@ From \ref{fig:prims_vs_A} as the number of thread increases, the time taken by $
 \thesisbibliography
 
 \begin{thebibliography}{99}
-
-%% A quick-and-dirty hack to add text between the bibliography section title
-%% and the first reference. You don't need this in your thesis, so remove it.
-  \item[]
-  \hskip-\leftmargin
-  \begin{minipage}{\textwidth}
-	This is the list of references to the sources cited in 
-	appendix~\ref{app:layout}. The list more or less follows the Vancouver 
-	style (IEEE). See appendix~\ref{app:reference} for a detailed exposition 
-	on cross-referencing and bibliography styles. Follow the description there.
-  \end{minipage}
-  \bigskip
-%% End of hack.
 
 	\bibitem{MSTLogLogn} Zvi Lotker, Boaz Patt-Shamir, Elan Pavlov, and David Peleg, ”MST Construction in $O(\log{\log{n}})$ Communication Rounds"
 	\textit{SIAM Journal on Computing}, 35(1):120–131, 2005.
