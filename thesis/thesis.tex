@@ -303,7 +303,7 @@ Figure \ref{fig:mpi_composition_n8_t1} shows the same time composition of $\msta
 
 Figure \ref{fig:mpi_composition_strong_scaling_16384} is a demonstration of how the time composition changes with a fixed number of vertices but a varying number of threads. Horizontally, the number of threads increases as the number of vertices on each thread decreases. There are 16384 vertices in total. The time composition pattern is similar to \ref{fig:mpi_composition_n1_t8}. For a fixed number of vertices, as there are more vertices on each thread and fewer threads in total, the thread computation time becomes the dominant factor compared to MPI communication time and rank 0 computation time. Whereas when there are more threads and fewer vertices on each thread, the MPI communication time becomes the dominant factor. 
 
-This concludes that for larger graphs, the fewer vertices on each thread, the more time is spent on MPI communication, which is more similar to the scenario of Congested Clique. On the opposite, the more vertices on each thread, the more time is spent on local computation, which is not similar to the scenario of Congested Clique. 
+This concludes that for larger graphs, the fewer vertices on each thread, the more time is spent on MPI communication and the rank 0 computation, which is more similar to the scenario of Congested Clique. On the opposite, the more vertices on each thread, the more time is spent on local computation, which is not similar to the scenario of Congested Clique.
 
 \subsection{Round-based time composition}
 \begin{figure}[h]
@@ -313,10 +313,38 @@ This concludes that for larger graphs, the fewer vertices on each thread, the mo
 	\label{fig:n1_t8_16384_details}
 \end{figure}
 
-Figure \ref{fig:n1_t8_16384_details} is a detailed time composition of $\mstalgo$ with MPI with 8 threads on a single node and 16384 vertices. $mstalgo$ ran for 3 rounds. $t\_mpi$ is the total time spent on MPI communication in a round. It is a sum $comm0$, $comm1$, $comm2$, $comm3$ and, $comm4$. 
+\begin{figure}[h]
+	\centering
+		\includegraphics[height=25mm]{./figs/n1_t8_16384_details_original.png}
+	\caption{$\mstalgo$ with no simplification detailed time composition with MPI with 8 threads and 16384 vertices}
+	\label{fig:n1_t8_16384_details_original}
+\end{figure}
 
+Figure \ref{fig:n1_t8_16384_details} is a detailed time composition of $\mstalgo$ with MPI with 8 threads on a single node and 16384 vertices. $mstalgo$ ran for 3 rounds. $t\_mpi$ is the time spent on MPI communication in a round. It is a sum of $comm0$, $comm1$, $comm2$, $comm3$ and, $comm4$. $t\_rank0$ is the rank 0 computation time in each round. It corresponds to the step 4 of the algorithm. $t\_total$ is the total time spent on the round. The difference between $t\_total$ and ($t\_mpi$ + $t\_rank0$) is the time spent on parallel computation. 
+
+The first round takes the least time as the result of the simplification. Without the simplification, the first round takes the most time shown in \ref{fig:n1_t8_16384_details_original}. The Time decreases as the rounds go on. The number of clusters decreases as more and more vertices are added to the spanning tree along the process. This means, that the more rounds the algorithm runs, the fewer edges to process for the next round. The MPI communication time and the computation time show a correlation to the number of edges to process in the round. The unbalanced workload in each round causes an unbalanced running time.
+
+The time spent on each round is unbalanced. The time composition of each round is different. In the first round, the MPI communication time only takes less than 10\% of the total time. In the second round, the MPI communication time takes more than 40\%. In the third round, the MPI communication time takes less than 10\%. 
 \subsection{Scalability}
 
+\begin{figure}[h]
+	\centering
+		\includegraphics[height=70mm]{./figs/mpi_cpp_strong_scaling.pdf}
+	\caption{Strong scaling performance of $\mstalgo$}
+	\label{fig:mpi_cpp_strong_scaling}
+\end{figure}
+
+Figure \ref{fig:mpi_cpp_strong_scaling} shows the strong scaling performance of $\mstalgo$. There are three different lines in the plot with 8192, 16384, and 32768 vertices. The number of threads increases from 8 to 258 Horizontally. 
+
+All three strong scaling plots are very close to the ideal speedup line. The proportion of execution time spent on the part that can be parallelized is dominant (\cite{HPC_scaling}). The algorithm scales the best in the strong scaling with 32768 vertices compared to the rest lines, as it is the closest line to the ideal speedup line. The algorithm scales the worst in the strong scaling with 8192 vertices compared to the rest lines, as it is the furthest line to the ideal speedup line. 
+
+From figure \ref{fig:mpi_cpp_strong_scaling}, the larger the graph, the better speedup the algorithm can achieve with the same amount of threads. This result corresponds to the time composition in figure \ref{fig:mpi_composition_n1_t8}. For a fixed amount of threads, more vertices on each thread will lead to more time spent on thread computation and less time on MPI communication and rank 0 computation. 
+\begin{figure}[h]
+	\centering
+		\includegraphics[height=70mm]{./figs/mpi_cpp_weak_scaling.pdf}
+	\caption{Weak scaling performance of $\mstalgo$}
+	\label{fig:mpi_cpp_weak_scaling}
+\end{figure}
 
 \subsection{Comparison with prim's algorithm}
 \begin{figure}[h]
@@ -336,6 +364,12 @@ As shown in \ref{fig:prims_vs_A}, with more than 16 threads, $\mstalgo$ can proc
 From \ref{fig:prims_vs_A} as the number of threads increases, the time taken by $\mstalgo$ decreases. When
 % Single node performance
 
+\begin{figure}[h]
+	\centering
+		\includegraphics[height=70mm]{./figs/prim's_vs_MST_loglog(n)_single_thread.pdf}
+	\caption{Prim's algorithm compared to $\mstalgo$ performance with single thread}
+	\label{fig:prim's_vs_A_single_thread.pdf}
+\end{figure}
 
 % how well it scales with the number of nodes
 % Questioning the time complexity
@@ -350,6 +384,11 @@ From \ref{fig:prims_vs_A} as the number of threads increases, the time taken by 
 \clearpage
 
 \section{CUDA performance}
+% What to compare
+
+
+\clearpage
+\section{Conclusion}
 
 \clearpage
 %% Bibliography/ list of references
@@ -366,17 +405,20 @@ From \ref{fig:prims_vs_A} as the number of threads increases, the time taken by 
 	\textit{Proceedings of the 2013 ACM Symposium on Principles of Distributed Computing (PODC '13)}, 2013, pp. 367-376.
 	\url{https://www.researchgate.net/publication/266659337_On_the_power_of_the_congested_clique_model}
 
-	\bibitem{Puhti} "Puhti," CSC - IT Center for Science, Accessed: Jul. 16, 2024. [Online]. Available: \url{https://research.csc.fi/-/puhti}
+	\bibitem{Puhti} "Puhti supercomputer" CSC - IT Center for Science, Accessed: Jul. 16, 2024. [Online]. Available: \url{https://research.csc.fi/-/puhti}
 
-	\bibitem{PuhtiService} "Puhti Service Description," CSC - IT Center for Science, Jun. 2021. [Online]. Available: \url{https://research.csc.fi/documents/48467/640068/Puhti-servicedescription-0621.pdf/e6fd32ae-92ea-2d42-0b6c-9f73c1a4c418?t=1628595451763}
+	\bibitem{PuhtiService} "Puhti Service Description" CSC - IT Center for Science, Jun. 2021. [Online]. Available: \url{https://research.csc.fi/documents/48467/640068/Puhti-servicedescription-0621.pdf/e6fd32ae-92ea-2d42-0b6c-9f73c1a4c418?t=1628595451763}
 
-	\bibitem{PuhtiDoc} "Puhti Computing Systems," CSC - IT Center for Science, Accessed: Jul. 16, 2024. [Online]. Available: \url{https://docs.csc.fi/computing/systems-puhti/}
+	\bibitem{PuhtiDoc} "Puhti Computing Systems" CSC - IT Center for Science, Accessed: Jul. 16, 2024. [Online]. Available: \url{https://docs.csc.fi/computing/systems-puhti/}
 
-	\bibitem{Slurm} "Slurm Overview," SchedMD, Accessed: Jul. 16, 2024. [Online]. Available: \url{https://slurm.schedmd.com/overview.html}
+	\bibitem{Slurm} "Slurm Overview" SchedMD, Accessed: Jul. 16, 2024. [Online]. Available: \url{https://slurm.schedmd.com/overview.html}
 
-	\bibitem{MPI} "MPI Forum," Accessed: Jul. 16, 2024. [Online]. Available: \url{https://www.mpi-forum.org/}
+	\bibitem{MPI} "MPI Forum" Accessed: Jul. 16, 2024. [Online]. Available: \url{https://www.mpi-forum.org/}
 
-	\bibitem{OpenMPI} "Open MPI," Accessed: Jul. 16, 2024. [Online]. Available: \url{https://www.open-mpi.org/}
+	\bibitem{OpenMPI} "Open MPI" Accessed: Jul. 16, 2024. [Online]. Available: \url{https://www.open-mpi.org/}
+
+	\bibitem{HPC_scaling} "HPC Scaling," HPC Wiki, Accessed: Jul. 16, 2024. [Online]. Available: \url{https://hpc-wiki.info/hpc/Scaling}
+
 \end{thebibliography}
 
 

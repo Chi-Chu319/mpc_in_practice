@@ -12,7 +12,7 @@
 \contentsline {section}{\numberline {1}Introduction}{7}{section.1}%
 \contentsline {section}{\numberline {2}Preliminaries}{8}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Congested clique}{8}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}The algorithm $MST\_\qopname \relax o{log}\qopname \relax o{log}{n}$}{8}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}The algorithm $MST\_\log \log {n}$}{8}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}The super-computer Puhti}{8}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}MPI}{8}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}CUDA}{8}{subsection.2.5}%
@@ -22,13 +22,14 @@
 \contentsline {subsection}{\numberline {3.3}Union-find}{10}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Random vertex partitioning}{10}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}Memory limit and graph generation}{10}{subsection.3.5}%
-\contentsline {section}{\numberline {4}$MST\_\qopname \relax o{log}\qopname \relax o{log}{n}$ performance}{11}{section.4}%
+\contentsline {section}{\numberline {4}$MST\_\log \log {n}$ performance}{11}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Time composition}{11}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Round-based time composition}{13}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Scalability}{13}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Comparison with prim's algorithm}{13}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Python vs C++}{14}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Congested clique to CUDA}{15}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Congested Clique simulation}{15}{subsection.5.1}%
-\contentsline {section}{\numberline {6}CUDA performance}{16}{section.6}%
-\contentsline {section}{References}{17}{section*.12}%
+\contentsline {subsection}{\numberline {4.3}Scalability}{14}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Comparison with prim's algorithm}{15}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Python vs C++}{16}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Congested clique to CUDA}{17}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Congested Clique simulation}{17}{subsection.5.1}%
+\contentsline {section}{\numberline {6}CUDA performance}{18}{section.6}%
+\contentsline {section}{\numberline {7}Conclusion}{19}{section.7}%
+\contentsline {section}{References}{20}{section*.16}%
