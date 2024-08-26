@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.8)  20 AUG 2024 17:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.8)  26 AUG 2024 16:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1614,7 +1614,7 @@ Package microtype Warning: I cannot find a spacing list for font
 (microtype)                `TS1/ntxtlf/m/n/12' (context: `nonfrench'). Switching off
 (microtype)                spacing for this font on input line 106.
 
-<doclicense-CC-by-nc-sa-88x31.pdf, id=131, 90.3375pt x 31.61812pt>
+<doclicense-CC-by-nc-sa-88x31.pdf, id=163, 90.3375pt x 31.61812pt>
 File: doclicense-CC-by-nc-sa-88x31.pdf Graphic file (type pdf)
 <use doclicense-CC-by-nc-sa-88x31.pdf>
 Package pdftex.def Info: doclicense-CC-by-nc-sa-88x31.pdf  used on input line 106.
@@ -1667,22 +1667,24 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 8.8pt on input line 25.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 6.6pt on input line 25.
-)
+
+
+[5])
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
 
 
-[5]
+[6]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 14.4pt on input line 143.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 14.4pt on input line 143.
 
 
-[6]
+[7]
 
-[7
+[8
 
 ]
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
@@ -1754,136 +1756,136 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 194.
 
-LaTeX Font Info:    Trying to load font information for T1+fvm on input line 198.
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 199.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/bera/t1fvm.fd
 File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 9.0pt on input line 198.
-
-
-[8
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 224--230
-
- []
-
+(Font)              scaled to size 9.0pt on input line 199.
 
 
 [9
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 228--234
 
-[10]
+ []
+
+
+
+[10
+
+]
+
+[11]
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 17.28pt on input line 268.
+(Font)              scaled to size 17.28pt on input line 272.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 12.5pt on input line 268.
+(Font)              scaled to size 12.5pt on input line 272.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 9.4pt on input line 268.
+(Font)              scaled to size 9.4pt on input line 272.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 17.28pt on input line 268.
+(Font)              scaled to size 17.28pt on input line 272.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 12.5pt on input line 268.
+(Font)              scaled to size 12.5pt on input line 272.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 9.4pt on input line 268.
+(Font)              scaled to size 9.4pt on input line 272.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 17.28pt on input line 268.
+(Font)              scaled to size 17.28pt on input line 272.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 12.5pt on input line 268.
+(Font)              scaled to size 12.5pt on input line 272.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 9.4pt on input line 268.
+(Font)              scaled to size 9.4pt on input line 272.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 17.28pt on input line 268.
+(Font)              scaled to size 17.28pt on input line 272.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 12.5pt on input line 268.
+(Font)              scaled to size 12.5pt on input line 272.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 9.4pt on input line 268.
+(Font)              scaled to size 9.4pt on input line 272.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 17.28pt on input line 268.
+(Font)              scaled to size 17.28pt on input line 272.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 12.5pt on input line 268.
+(Font)              scaled to size 12.5pt on input line 272.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 9.4pt on input line 268.
+(Font)              scaled to size 9.4pt on input line 272.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 17.28pt on input line 268.
+(Font)              scaled to size 17.28pt on input line 272.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 12.5pt on input line 268.
+(Font)              scaled to size 12.5pt on input line 272.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 9.4pt on input line 268.
+(Font)              scaled to size 9.4pt on input line 272.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 17.28pt on input line 268.
+(Font)              scaled to size 17.28pt on input line 272.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 12.5pt on input line 268.
+(Font)              scaled to size 12.5pt on input line 272.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 9.4pt on input line 268.
+(Font)              scaled to size 9.4pt on input line 272.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 17.28pt on input line 268.
+(Font)              scaled to size 17.28pt on input line 272.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 12.5pt on input line 268.
+(Font)              scaled to size 12.5pt on input line 272.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 9.4pt on input line 268.
+(Font)              scaled to size 9.4pt on input line 272.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.87495pt on input line 268.
+(Font)              scaled to size 11.87495pt on input line 272.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.92996pt on input line 268.
+(Font)              scaled to size 8.92996pt on input line 272.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 268.
+(hyperref)                removing `math shift' on input line 272.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\log' on input line 268.
+(hyperref)                removing `\log' on input line 272.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\log' on input line 268.
+(hyperref)                removing `\log' on input line 272.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 268.
+(hyperref)                removing `math shift' on input line 272.
 
-<./figs/mpi_composition_n1_t8.pdf, id=228, 409.62848pt x 349.41113pt>
+<./figs/mpi_composition_n1_t8.pdf, id=272, 409.62848pt x 349.41113pt>
 File: ./figs/mpi_composition_n1_t8.pdf Graphic file (type pdf)
 <use ./figs/mpi_composition_n1_t8.pdf>
-Package pdftex.def Info: ./figs/mpi_composition_n1_t8.pdf  used on input line 273.
+Package pdftex.def Info: ./figs/mpi_composition_n1_t8.pdf  used on input line 277.
 (pdftex.def)             Requested size: 300.20763pt x 256.0748pt.
-<./figs/mpi_composition_n8_t1.pdf, id=230, 409.62848pt x 349.41113pt>
+<./figs/mpi_composition_n8_t1.pdf, id=274, 409.62848pt x 349.41113pt>
 File: ./figs/mpi_composition_n8_t1.pdf Graphic file (type pdf)
 <use ./figs/mpi_composition_n8_t1.pdf>
-Package pdftex.def Info: ./figs/mpi_composition_n8_t1.pdf  used on input line 290.
+Package pdftex.def Info: ./figs/mpi_composition_n8_t1.pdf  used on input line 294.
 (pdftex.def)             Requested size: 300.20763pt x 256.0748pt.
 
 
-[11
+[12
 
  <./figs/mpi_composition_n1_t8.pdf>]
-<./figs/strong_scale_16384_composition.pdf, id=287, 418.2256pt x 327.20317pt>
+<./figs/strong_scale_16384_composition.pdf, id=331, 418.2256pt x 327.20317pt>
 File: ./figs/strong_scale_16384_composition.pdf Graphic file (type pdf)
 <use ./figs/strong_scale_16384_composition.pdf>
-Package pdftex.def Info: ./figs/strong_scale_16384_composition.pdf  used on input line 299.
+Package pdftex.def Info: ./figs/strong_scale_16384_composition.pdf  used on input line 303.
 (pdftex.def)             Requested size: 327.32504pt x 256.0748pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs/n1_t8_16384_details.png, id=290, 587.19376pt x 103.38625pt>
+<./figs/n1_t8_16384_details.png, id=334, 587.19376pt x 103.38625pt>
 File: ./figs/n1_t8_16384_details.png Graphic file (type png)
 <use ./figs/n1_t8_16384_details.png>
-Package pdftex.def Info: ./figs/n1_t8_16384_details.png  used on input line 311.
+Package pdftex.def Info: ./figs/n1_t8_16384_details.png  used on input line 315.
 (pdftex.def)             Requested size: 404.0083pt x 71.13188pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs/n1_t8_16384_details_original.png, id=292, 599.23875pt x 98.3675pt>
+<./figs/n1_t8_16384_details_original.png, id=336, 599.23875pt x 98.3675pt>
 File: ./figs/n1_t8_16384_details_original.png Graphic file (type png)
 <use ./figs/n1_t8_16384_details_original.png>
-Package pdftex.def Info: ./figs/n1_t8_16384_details_original.png  used on input line 318.
+Package pdftex.def Info: ./figs/n1_t8_16384_details_original.png  used on input line 322.
 (pdftex.def)             Requested size: 433.31688pt x 71.13188pt.
 
-Overfull \hbox (29.28775pt too wide) in paragraph at lines 318--319
+Overfull \hbox (29.28775pt too wide) in paragraph at lines 322--323
  [][] 
  []
 
@@ -1892,55 +1894,62 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[12 <./figs/mpi_composition_n8_t1.pdf>]
+[13 <./figs/mpi_composition_n8_t1.pdf>]
 
-[13 <./figs/strong_scale_16384_composition.pdf> <./figs/n1_t8_16384_details.png>]
-<./figs/mpi_cpp_strong_scaling.pdf, id=403, 608.06236pt x 393.98067pt>
+[14 <./figs/strong_scale_16384_composition.pdf> <./figs/n1_t8_16384_details.png>]
+<./figs/mpi_cpp_strong_scaling.pdf, id=448, 608.06236pt x 393.98067pt>
 File: ./figs/mpi_cpp_strong_scaling.pdf Graphic file (type pdf)
 <use ./figs/mpi_cpp_strong_scaling.pdf>
-Package pdftex.def Info: ./figs/mpi_cpp_strong_scaling.pdf  used on input line 332.
+Package pdftex.def Info: ./figs/mpi_cpp_strong_scaling.pdf  used on input line 336.
 (pdftex.def)             Requested size: 307.39844pt x 199.16928pt.
-<./figs/mpi_cpp_weak_scaling.pdf, id=408, 608.06236pt x 393.98067pt>
+<./figs/mpi_cpp_weak_scaling.pdf, id=453, 608.06236pt x 393.98067pt>
 File: ./figs/mpi_cpp_weak_scaling.pdf Graphic file (type pdf)
 <use ./figs/mpi_cpp_weak_scaling.pdf>
-Package pdftex.def Info: ./figs/mpi_cpp_weak_scaling.pdf  used on input line 344.
+Package pdftex.def Info: ./figs/mpi_cpp_weak_scaling.pdf  used on input line 348.
 (pdftex.def)             Requested size: 307.39844pt x 199.16928pt.
 
 
-[14 <./figs/n1_t8_16384_details_original.png> <./figs/mpi_cpp_strong_scaling.pdf>]
-<./figs/prim's_vs_A.pdf, id=461, 619.38593pt x 393.98067pt>
+[15 <./figs/n1_t8_16384_details_original.png> <./figs/mpi_cpp_strong_scaling.pdf>]
+<./figs/prim's_vs_A.pdf, id=505, 619.38593pt x 393.98067pt>
 File: ./figs/prim's_vs_A.pdf Graphic file (type pdf)
 <use ./figs/prim's_vs_A.pdf>
-Package pdftex.def Info: ./figs/prim's_vs_A.pdf  used on input line 352.
+Package pdftex.def Info: ./figs/prim's_vs_A.pdf  used on input line 356.
 (pdftex.def)             Requested size: 313.12294pt x 199.16928pt.
 
 
-[15 <./figs/mpi_cpp_weak_scaling.pdf> <./figs/prim's_vs_A.pdf>]
-<./figs/prim's_vs_MST_loglog(n)_single_thread.pdf, id=565, 614.44559pt x 393.98067pt>
+[16 <./figs/mpi_cpp_weak_scaling.pdf> <./figs/prim's_vs_A.pdf>]
+<./figs/prim's_vs_MST_loglog(n)_single_thread.pdf, id=609, 614.44559pt x 393.98067pt>
 File: ./figs/prim's_vs_MST_loglog(n)_single_thread.pdf Graphic file (type pdf)
 <use ./figs/prim's_vs_MST_loglog(n)_single_thread.pdf>
-Package pdftex.def Info: ./figs/prim's_vs_MST_loglog(n)_single_thread.pdf  used on input line 369.
+Package pdftex.def Info: ./figs/prim's_vs_MST_loglog(n)_single_thread.pdf  used on input line 373.
 (pdftex.def)             Requested size: 310.6254pt x 199.16928pt.
 
 
-[16 <./figs/prim's_vs_MST_loglog(n)_single_thread.pdf>]
+[17 <./figs/prim's_vs_MST_loglog(n)_single_thread.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 401--407
 
-[17
+ []
 
-]
+
 
 [18
 
 ]
 
-[19
+[19]
+
+[20
+
+]
+
+[21
 
 ]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 12.0pt on input line 401.
+(Font)              scaled to size 12.0pt on input line 453.
 
 
-[20
+[22
 
 ] (./thesis.aux)
  ***********
@@ -1948,21 +1957,21 @@ LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: B9F3427D6CDD7CCD129C54202B89F1E7;4512.
+(rerunfilecheck)             Checksum: 24C8783F9F385B9F8279F9676C9E1906;6233.
  ) 
 Here is how much of TeX's memory you used:
- 37713 strings out of 473584
- 667799 string characters out of 5728335
- 1943905 words of memory out of 5000000
- 59686 multiletter control sequences out of 15000+600000
- 667521 words of font info for 255 fonts, out of 8000000 for 9000
+ 37741 strings out of 473584
+ 668204 string characters out of 5728335
+ 1949905 words of memory out of 5000000
+ 59697 multiletter control sequences out of 15000+600000
+ 667749 words of font info for 257 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  132i,12n,135p,1087b,2556s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on thesis.pdf (20 pages, 370768 bytes).
+Output written on thesis.pdf (22 pages, 383586 bytes).
 PDF statistics:
- 721 PDF objects out of 1000 (max. 8388607)
- 368 compressed objects within 4 object streams
- 73 named destinations out of 1000 (max. 500000)
- 57643 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 781 PDF objects out of 1000 (max. 8388607)
+ 425 compressed objects within 5 object streams
+ 86 named destinations out of 1000 (max. 500000)
+ 57707 words of extra memory for PDF output out of 61914 (max. 10000000)
 

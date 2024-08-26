@@ -189,10 +189,11 @@ Scalability:
 \section{Preliminaries}
 
 \subsection{Congested clique}
-what is a round? What is each step in a round? The round is synchronous. The communication bandwidth to each neighbor is $O(\log{n})$.
+what is a round? The round is synchronous. The communication bandwidth to each neighbor is $O(\log{n})$.
 
 \subsection{The algorithm $\mstalgo$}
-In each round, the algorithm consists of the following steps: (TODO)
+What is a phase and a step in $\mstalgo$?
+In each phase, the algorithm consists of the following steps: (TODO)
 \begin{enumerate}
   \item Each vertex $v$ computes the minimum weight edge $e(v, F')$ that connects $v$ to a leader $l$.
   \item The numbers start at 1 with each use of the \texttt{enumerate} environment.
@@ -207,6 +208,7 @@ The nodes are connected with a 100 Gbps HDR100 link, and the topology is a fat t
 \subsection{MPI}
 
 \subsection{CUDA}
+What is device, what is host, what is a kernel function. How to allocate memory on the device. How to copy data between host and device. How to launch a kernel function (define thread count). 
 
 \clearpage
 
@@ -217,6 +219,8 @@ $\mstalgo$ is simulated with OpenMPI and C++ on CPUs. Multiple CPU threads run c
 MPI (Message-passing interface) is a message-passing library interface specification that message-passing model for parallel computing \cite{MPI}. Open MPI is an open-source Message-passing Interface implementation. 
 
 One CPU thread can hold one or multiple vertices. The thread number is limited. With each thread simulating more than one vertex, larger graphs can be simulated. To simulate more than one vertex, each thread holds all the edges adjacent to the vertices it is responsible for and run the algorithm for each vertex. 
+
+TODO how is the communication synchronized.
 
 When running $\mstalgo$, in the beginning, each rank receives input to run the algorithm.
 The input includes a list of vertices the rank is responsible for and all the adjacent edges.
@@ -231,16 +235,16 @@ step 6 $\rightarrow$ Local computation on each thread\\
 To ensure the correctness of the algorithm, the result of $\mstalgo$ is compared to the result of the prim's algorithm on the same graph.
 
 
-\subsection{Simplification on the first round}
+\subsection{Simplification on the first phase}
 We implement the algorithm with the best practices and common sense. The algorithm is modified to align with the implementation goal. 
 
-At the beginning of the first round, there is no spanning tree or clusters formed yet. Each vertex itself is a cluster. In the first step, for each vertex $v$ and edge $e \in E_v$, $e$ is sent over the connection $e$. 
+At the beginning of the first phase, there is no spanning tree or clusters formed yet. Each vertex itself is a cluster. In the first step, for each vertex $v$ and edge $e \in E_v$, $e$ is sent over the connection $e$. 
 Because for every two clusters $F \neq F'$, there is only one unique edge connecting them. 
 In step two, each cluster leader (the vertex itself) sorts all the edges it receives, which is all the edges the vertex is adjacent to check the minimum, sort and take only one as $\mu$ is $1$. 
 
-Essentially, all the above steps find each vertex the minimum weight edge adjacent. Simplification is done to the algorithm during the first rounds. In the simplified version, rank 0 gathers the minimum weighed edges adjacent to each vertex (comm0) and skips steps 1-3 during the first round. 
+Essentially, all the above steps find each vertex the minimum weight edge adjacent. Simplification is done to the algorithm during the first phase. In the simplified version, rank 0 gathers the minimum weighed edges adjacent to each vertex (comm0) and skips steps 1-3 during the first phase. 
 
-The Simplification has a significant impact on the performance of the algorithm. Because the time taken by MPI communication corresponds to the message size. During the first round, each vertex is a cluster, and the communication needs are the biggest in the whole algorithm. 
+The Simplification has a significant impact on the performance of the algorithm. Because the time taken by MPI communication corresponds to the message size. During the first phase, each vertex is a cluster, and the communication needs are the biggest in the whole algorithm. 
 
 % \subsection{Scattering to the guardians}
 % In the third step, each cluster leader sends the minimum weight edge to the guardians of the cluster. before every guardian forwards the edge to rank 0. This avoids breaking the bandwidth limit if each cluster leader sends the edge to rank 0 directly in the Congest Clique. 
@@ -322,9 +326,9 @@ This concludes that for larger graphs, the fewer vertices on each thread, the mo
 
 Figure \ref{fig:n1_t8_16384_details} is a detailed time composition of $\mstalgo$ with MPI with 8 threads on a single node and 16384 vertices. $mstalgo$ ran for 3 rounds. $t\_mpi$ is the time spent on MPI communication in a round. It is a sum of $comm0$, $comm1$, $comm2$, $comm3$ and, $comm4$. $t\_rank0$ is the rank 0 computation time in each round. It corresponds to the step 4 of the algorithm. $t\_total$ is the total time spent on the round. The difference between $t\_total$ and ($t\_mpi$ + $t\_rank0$) is the time spent on parallel computation. 
 
-The first round takes the least time as the result of the simplification. Without the simplification, the first round takes the most time shown in \ref{fig:n1_t8_16384_details_original}. The Time decreases as the rounds go on. The number of clusters decreases as more and more vertices are added to the spanning tree along the process. This means, that the more rounds the algorithm runs, the fewer edges to process for the next round. The MPI communication time and the computation time show a correlation to the number of edges to process in the round. The unbalanced workload in each round causes an unbalanced running time.
+The first phase takes the least time as the result of the simplification. Without the simplification, the first phase takes the most time shown in \ref{fig:n1_t8_16384_details_original}. The Time decreases as the rounds go on. The number of clusters decreases as more and more vertices are added to the spanning tree along the process. This means, that the more rounds the algorithm runs, the fewer edges to process for the next round. The MPI communication time and the computation time show a correlation to the number of edges to process in the round. The unbalanced workload in each round causes an unbalanced running time.
 
-The time spent on each round is unbalanced. The time composition of each round is different. In the first round, the MPI communication time only takes less than 10\% of the total time. In the second round, the MPI communication time takes more than 40\%. In the third round, the MPI communication time takes less than 10\%. 
+The time spent on each round is unbalanced. The time composition of each round is different. In the first phase, the MPI communication time only takes less than 10\% of the total time. In the second round, the MPI communication time takes more than 40\%. In the third round, the MPI communication time takes less than 10\%. 
 \subsection{Scalability}
 
 \begin{figure}[h]
@@ -336,7 +340,7 @@ The time spent on each round is unbalanced. The time composition of each round i
 
 Figure \ref{fig:mpi_cpp_strong_scaling} shows the strong scaling performance of $\mstalgo$. There are three different lines in the plot with 8192, 16384, and 32768 vertices. The number of threads increases from 8 to 258 Horizontally. 
 
-All three strong scaling plots are very close to the ideal speedup line. The proportion of execution time spent on the part that can be parallelized is dominant (\cite{HPC_scaling}). The algorithm scales the best in the strong scaling with 32768 vertices compared to the rest lines, as it is the closest line to the ideal speedup line. The algorithm scales the worst in the strong scaling with 8192 vertices compared to the rest lines, as it is the furthest line to the ideal speedup line. 
+All three strong scaling plots are very close to the ideal speedup line. The proportion of execution time spent on the part that can be parallelized is dominant \cite{HPCScaling}. The algorithm scales the best in the strong scaling with 32768 vertices compared to the rest lines, as it is the closest line to the ideal speedup line. The algorithm scales the worst in the strong scaling with 8192 vertices compared to the rest lines, as it is the furthest line to the ideal speedup line. 
 
 From figure \ref{fig:mpi_cpp_strong_scaling}, the larger the graph, the better speedup the algorithm can achieve with the same amount of threads. This result corresponds to the time composition in figure \ref{fig:mpi_composition_n1_t8}. For a fixed amount of threads, more vertices on each thread will lead to more time spent on thread computation and less time on MPI communication and rank 0 computation. 
 \begin{figure}[h]
@@ -380,15 +384,63 @@ From \ref{fig:prims_vs_A} as the number of threads increases, the time taken by 
 
 \section{Congested clique to CUDA}
 \subsection{Congested Clique simulation}
+$\mstalgo$ is simulated with CUDA on Nvidia GPUs. Specifically, the Nvidia Tesla V100 GPU according to $\cite{PuhtiDoc}$. The V100 GPU has the capability for issuing 163,840 threads. Compared to CPU threads, GPU threads are more lightweight and can be issued in a larger number. This features allows each CUDA thread to simulate one vertex in the graph.
 
+CUDA is "a general purpose parallel computing platform and programming model that leverages the parallel compute engine in NVIDIA GPUs to solve many complex computational problems in a more efficient way than on a CPU" (\cite{CUDA}). 
+
+With CUDA, each thread simulates one machine in the Congested Clique model, which is a vertex in the clique graph. Kernels function are launched to run on the GPU. Each kernel function corresponds to a round in the Congested Clique. A round in the Congested Clique consists of communication and local computation in each machine, so as in the kernel function, each thread can do own location computation and a synchronized communication round. The kernel function an extra pointer that points to the GPU memory allocated for communication. 
+
+Threads can write and read from the memory space to achieve communication. Each thread has its chunk of memory space in the communication memory space. When thread $A$ sends a message to thread $B$ in the Congested Clique Model, thread $A$ writes the message to the memory space and thread $B$ reads the message from the memory space as a simulation. 
+
+Each kernel function is only responsible for one communication round. The kernel function exits when all the threads finish their communication and computation. The result of the kernel function resides in the memory space for communication. 
+
+When there is only on machine active in the Congested Clique Model, instead of launching a kernel function with a single thread, that part of the computation is done on the CPU. CPU is far more efficient in handling single-threaded computation than the GPU. 
+
+The input graph of $\mstalgo$ is generated on the CPU and copied to the GPU memory. Each thread learns its adjacent edges by reading the graph from the GPU memory. 
+
+step 1 $\rightarrow$ min\_to\_cluster\_kernel\\
+step 2 $\rightarrow$ min\_from\_cluster\_kernel the min edges are not sent to the guardians\\
+step 3 $\rightarrow$ The memory is copied back to host memory and edges are collected\\
+step 4 $\rightarrow$ Local computation on the host\\
+step 5 $\rightarrow$ The updated cluster info is copied backed in to the Device memory. The threads will read about it in the next phase\\
+step 6 $\rightarrow$ Same as above\\
+\subsection{Complete and sparse graphs}
+% Why sparse graph
+The Nvidia V100 GPU has the capability to issue a huge amount of threads but has limited to 16G / 32G. That means, with complete graphs, the number of vertices that can be simulated is limited as the $|E|$ grows quadratically corresponds to the $|V|$. As $|V|$ is limited and each thread simulates one vertex, the number of threads that can be issued is limited. This leads a waste of the GPU's capability. 
+
+Thus, Introducing sparse graphs address the under-utilization of the GPU's capability. For the same $|E|$, more threads can be issued to balance out the work load.
+
+% adjacency list/matrix
+The complete graph is represented by an adjacency matrix ,where each column represents the adjacent edges of a vertex. Whereas the sparse graph is represented by an adjacency list, where each vertex has a list of adjacent edges. 
+
+% Why the algo works on sparse graph
+$\mstalgo$ is designed to work on a complete graph but it does work for spares graphs as well. In the Congested Clique, the network graph is the equivalent as the graph to be solved, which is a complete graph / network. To solve the sparse graph, the network graph stays complete and the sparse graph is a subgraph of the network graph. 
+
+TODO proof that the algo works
+
+A MST can always be found in a complete graph, but not in a sparse graph. To make a fair comparison for $\mstalgo$ on complete and sparse graphs, the sparse graph is generated in a way that a MST can be found. The adjacency list of the sparse graph is generated in two steps.
+
+First, a Prüfer sequence is generated with all the vertices and converted into a tree. A Prüfer sequence is an unique sequence of vertices that encodes a tree. The tree serves as the skeleton of the sparse graph making sure the graph is connected. The second step is to add edges tree randomly. When create the sparse graph, the expected rank and the number of vertices are given. So when the number of edges meets the rank requirement, the second step stops.
+
+\subsection{Best practices}
+$\mstalgo$ on CUDA follows the best practices and common sense as it with $MPI$. All the tree information is maintained on the host and shared with the device when the kernel functions are launched. The tree is kept as a union-find data structure. 
+
+(?) The simplification is not applied to the CUDA implementation, because the bandwidth is not a bottleneck anymore.
+% union find and simplification
 \clearpage
 
 \section{CUDA performance}
-% What to compare
-
+% What to compare (CPU single thread? why not)
+\subsection{Time composition}
+\subsection{Comparison with Prim's on single threaded CPU}
+\subsection{Comparison with MPI (time composition)}
+\subsection{Scalability}
+\subsection{Complete vs sparse graph}
 
 \clearpage
 \section{Conclusion}
+\subsection{implementation compatibility}
+The MPI implementation is more natural than the CUDA implementation. 
 
 \clearpage
 %% Bibliography/ list of references
@@ -417,7 +469,13 @@ From \ref{fig:prims_vs_A} as the number of threads increases, the time taken by 
 
 	\bibitem{OpenMPI} "Open MPI" Accessed: Jul. 16, 2024. [Online]. Available: \url{https://www.open-mpi.org/}
 
-	\bibitem{HPC_scaling} "HPC Scaling," HPC Wiki, Accessed: Jul. 16, 2024. [Online]. Available: \url{https://hpc-wiki.info/hpc/Scaling}
+	\bibitem{HPCScaling} "HPC Scaling," HPC Wiki, Accessed: Jul. 16, 2024. [Online]. Available: \url{https://hpc-wiki.info/hpc/Scaling}
+
+	\bibitem{V100Architecture} "NVIDIA Volta Architecture" NVIDIA Corporation, White Paper, 2017. [Online]. Available: \url{https://images.nvidia.com/content/volta-architecture/pdf/volta-architecture-whitepaper.pdf}
+
+	\bibitem{CUDA} "CUDA C++ Programming Guide" NVIDIA Corporation, Accessed: Jul. 16, 2024. [Online]. Available: \url{https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html}
+
+	\bibitem{Prufer} H. Prüfer, "Neuer Beweis eines Satzes über Permutationen," \textit{Archiv der Mathematischen Physik}, vol. 27, pp. 742--744, 1918.
 
 \end{thebibliography}
 
