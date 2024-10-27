@@ -65,7 +65,7 @@
    <dc:title><rdf:Alt><rdf:li xml:lang="x-default">MPC in practice</rdf:li></rdf:Alt></dc:title>
    <dc:creator><rdf:Seq><rdf:li>Tianxing Wu</rdf:li></rdf:Seq></dc:creator>
    <dc:rights><rdf:Alt><rdf:li xml:lang="x-default">© 2024. This work is licensed under a Creative Commons "Attribution-NonCommercial-ShareAlike 4.0 International" (BY-NC-SA 4.0) license.</rdf:li></rdf:Alt></dc:rights>
-   <dc:description><rdf:Alt><rdf:li xml:lang="x-default"> The purpose of this thesis is to study how congested clique algorithms perform on modern supercomputers.\\ A representative algorithm $MST\protect _\protect \mathop {\mathgroup \symoperators log}\nolimits \protect \mathop {\mathgroup \symoperators log}\nolimits {n}$ for Congested Clique is studied. The algorithm is implemented on Puhti, a Finnish supercomputer hosted by CSC. The congested clique setting is simulated with the Message Passing Interface (MPI) and CUDA.\\ MPI is a message-passing library interface specification that uses a message-passing model for parallel computing.\\ result: TODO </rdf:li></rdf:Alt></dc:description>
+   <dc:description><rdf:Alt><rdf:li xml:lang="x-default"> The purpose of this thesis is to study how congested clique algorithms perform on modern supercomputers.\\ A representative algorithm $MST\protect _\relax o{log}\relax o{log}{n}$for Congested Clique is studied. The algorithm is implemented on Puhti, a Finnish supercomputer hosted by CSC. The congested clique setting is simulated with the Message Passing Interface (MPI) and CUDA.\\ MPI is a message-passing library interface specification that uses a message-passing model for parallel computing.\\ result: TODO </rdf:li></rdf:Alt></dc:description>
    <dc:subject><rdf:Bag><rdf:li>Distributed computing, Supercomputing, Congested clique, MST, Puhti, MPI, CUDA, MPC</rdf:li></rdf:Bag></dc:subject>
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:prism="http://prismstandard.org/namespaces/basic/2.2/"> 
@@ -78,9 +78,9 @@
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/"> 
    <xmp:CreatorTool>LaTeX with hyperref</xmp:CreatorTool> 
-   <xmp:ModifyDate>2024-08-26T16:01:05+03:00</xmp:ModifyDate> 
-   <xmp:CreateDate>2024-08-26T16:01:05+03:00</xmp:CreateDate> 
-   <xmp:MetadataDate>2024-08-26T16:01:05+03:00</xmp:MetadataDate> 
+   <xmp:ModifyDate>2024-10-27T11:36:56+02:00</xmp:ModifyDate> 
+   <xmp:CreateDate>2024-10-27T11:36:56+02:00</xmp:CreateDate> 
+   <xmp:MetadataDate>2024-10-27T11:36:56+02:00</xmp:MetadataDate> 
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmpRights = "http://ns.adobe.com/xap/1.0/rights/"> 
    <xmpRights:Marked>True</xmpRights:Marked>
@@ -89,7 +89,7 @@
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"> 
    <xmpMM:DocumentID>uuid:C8CFC28F-88E1-7995-E9AD-F6D12EAD346B</xmpMM:DocumentID> 
-   <xmpMM:InstanceID>uuid:1906E307-4777-9CE5-FFA2-68AE1762A94C</xmpMM:InstanceID> 
+   <xmpMM:InstanceID>uuid:6329491A-070B-299D-1B94-A51757DB707F</xmpMM:InstanceID> 
   </rdf:Description> 
  </rdf:RDF> 
 </x:xmpmeta> 

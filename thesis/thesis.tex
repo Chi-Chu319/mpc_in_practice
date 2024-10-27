@@ -82,17 +82,16 @@
 	International" (BY-NC-SA 4.0) license.}{\noindent\textcopyright\ \number
 	\year \ \doclicenseThis}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\mstalgo}{$MST\_\log\log{n}$}
 
 \keywords{Distributed computing, Supercomputing, Congested clique, MST, Puhti, MPI, CUDA, MPC}
 
 \thesisabstract{
 The purpose of this thesis is to study how congested clique algorithms perform on modern supercomputers.\\
-A representative algorithm $\mstalgo$ for Congested Clique is studied. The algorithm is implemented on Puhti, a Finnish supercomputer hosted by CSC. The congested clique setting is simulated with the Message Passing Interface (MPI) and CUDA.\\
+A representative algorithm \mstalgo for Congested Clique is studied. The algorithm is implemented on Puhti, a Finnish supercomputer hosted by CSC. The congested clique setting is simulated with the Message Passing Interface (MPI) and CUDA.\\
 MPI is a message-passing library interface specification that uses a message-passing model for parallel computing.\\
 result: TODO
 }
-
-\newcommand{\mstalgo}{MST\_\log\log{n}}
 
 
 %% All that is printed on paper starts here
@@ -143,7 +142,7 @@ Otaniemi, 10 July 2024\\
 \subsection*{Abbreviations}
 
 \begin{tabular}{ll}
-$\mstalgo$         & The algorithm described in \cite{MSTLogLogn} \\
+\mstalgo         & The algorithm described in \cite{MSTLogLogn} \\
 \end{tabular}
 
 \cleardoublepage
@@ -156,50 +155,98 @@ $\mstalgo$         & The algorithm described in \cite{MSTLogLogn} \\
 % TODO What is the congested clique model.\\
 % TODO Relation between super computing and the congested clique model.\\
 % TODO Why MST, what is representative in the algo\\
-Congested Clique, described in \cite{powerCongestClique} is a mathematical model for distributed computing. It features $n$ inter-connected computers in a clique network, sending messages in a synchronized manner. In each round, each computer sends $O(\log{n})$ to each other computer. The computation efficiency is measured by the communication rounds. 
-In this work, the congested clique algorithm that solves the (Minimum spanning tree)$MST$ in $O(\log{\log{n}})$ rounds \cite{MSTLogLogn} is studied and implemented on the supercomputer Puhti \cite{Puhti}. We simulated the congested clique model with MPI and a CUDA GPU to run $\mstalgo$. 
 
-The purpose of this work is to identify the connection between $\mstalgo$ and modern distributed computing hardware and tools. The relations allow us to understand the bigger picture as $\mstalgo$ is representative of the congested clique model
+Congested Clique, described in \cite{powerCongestClique}, is a model for distributed computing. 
+It features $n$ computing nodes in a clique network, sending messages in a synchronized manner. A clique network is a complete network where each computing node is connected to all other nodes. 
+In the network, each node in the network corresponds to a node in an input graph $G$. 
 
-The representativeness of $\mstalgo$ can be shown in the following ways:
+The computation efficiency of the congested clique model is measured by the number of (communication) rounds it takes before the algorithm converges. Each round, each node do local computation and sends $O(\log{n})$ bits to each of its neighbor nodes. 
+With Congested Clique, we emphasis communication over local computation in a round. Because it is believed that the communication is the bottleneck in distributed computing. We consider local computation is free, as there are unlimited computing power and memory space on each node.
+
+Supercomputer are high-performance computing machines that are used for large-scale scientific and engineering problems. Unlike traditional computers, supercomputers use more than one processing unit \cite{IBMsupercomputing}. The distributed natural of supercomputers makes them a good fit for Congested Clique algorithms. Therefore, we want to study how Congested Clique algorithms perform on supercomputers. 
+
+\subsection{Methodology}
+The algorithm \mstalgo from \cite{MSTLogLogn} is chosen as the representative algorithm for discussion in this work. The representativeness will be later shown. It solves Minimum spanning tree ($MST$) problems in $O(\log{\log{n}})$ Congested Clique rounds. A $MST$ problem is to find a spanning tree of $G$ where its weight is as small as possible.  We show that \mstalgo represents the algorithms on Congested Clique so its property generalize to the whole algorithm category. 
+
+\mstalgo is implemented on the supercomputer Puhti, a Finnish supercomputer hosted by CSC \cite{Puhti}. We benchmark the performance of \mstalgo on Puhti to study its properties. The implementation is done with two different programming schemes:
 \begin{itemize}
-	\item[--] $\mstalgo$ exploit the full connectivity of the graph. In each round, there is a step where each computer sends $O(\log{n})$ messages to all the other computers.
-	\item[--] To comply with the $O(\log{n})$ limit when sending to a unique leader, large data is spilled to other computers before sending.
-	\item[--] The algorithm needs several rounds before its convergence.
+	\item[--] Message Passing Interface ($MPI$) programming scheme with CPUs.
+	\item[--] Compute Unified Device Architecture ($CUDA$) programming scheme with Nvidia GPUs.
 \end{itemize}
 
-We measure how compatible $\mstalgo$ is with the supercomputing infrastructure to find the connections. 
-The congested clique is simulated with MPI and CUDA. When implementing the algorithm pseudo-code into runnable, the compatibility is measured by the effort needed for the conversion. 
-The simulation consists of two parts, the local computation, and the message passing. When implementing $\mstalgo$, the coding follows best practices and common sense. 
+We simulates Congested Clique with the above schemes to run \mstalgo. When implementing \mstalgo, the coding follows best practices and common sense. We optimize how the algorithm is implemented but do not change the algorithm itself.
+\subsection{Objective}
+The purpose of this work is to identify the connections between the Congested Clique model and modern distributed computing hardware, software and tools. We discuss how to simulate the Congested Clique model on supercomputers. Then we evaluate the performance, scalability of \mstalgo and overhead of simulation to the software system to show the connections.
 
-Secondly, how the hardware is limiting the performance of the algorithm. Memory, CPU, GPU, network, which one is the bottleneck when the algorithm scales.
-How the algorithm performs compared to traditional sequential algorithms. By increasing the number of nodes, will it outperform the sequential algorithm with
+We evaluate how the hardware is limiting the performance of the algorithm. Memory, CPU, GPU, network. And what assumptions Congested Clique makes bring the performance bottleneck. And with what setting will the bottleneck appear. We also discuss with what setting the algorithm performs as Congested Clique model expects.
+
+We compare how the \mstalgo performs compared to its sequential alternative, in terms of:
 \begin{itemize}
-	\item[--] Speed comparing to sequential algorithms.
-	\item[--] Number of edges can be processed compared to sequential algorithms.
+	\item[--] Capability of processing large graphs, with large number of vertices and edges.
+	\item[--] Wall clock time when processing the same graphs.
 \end{itemize}
-Scalability:
+We discuss how is the scalability of the \mstalgo:
 \begin{itemize}
 	\item[--] Strong scaling and weak scaling (How having more processes speeds up the computation, which part of the hardware will become bottleneck when scaling continuously).
 	\item[--] Time composition for the run when scaling (MPI\_time vs local). Does the time complexity hold?
 \end{itemize}
-
 \clearpage
 
 \section{Preliminaries}
 
-\subsection{Congested clique}
-what is a round? The round is synchronous. The communication bandwidth to each neighbor is $O(\log{n})$.
+\subsection{Congested clique (also known as CLIQUE)}
+Each node in a Congested Clique network has a unique identifier of $O(\log{n})$ bits. Each node in the network corresponds to a vertex in the input complete graph $G$. In each round of a Congested Clique of $n$ nodes, each node does local computation and sends $O(\log{n})$ bits to each of its neighbor nodes. The rounds are synchronized, meaning that all nodes start and finish the round at the same time. \cite{powerCongestClique}
 
-\subsection{The algorithm $\mstalgo$}
-What is a phase and a step in $\mstalgo$?
-In each phase, the algorithm consists of the following steps: (TODO)
-\begin{enumerate}
-  \item Each vertex $v$ computes the minimum weight edge $e(v, F')$ that connects $v$ to a leader $l$.
-  \item The numbers start at 1 with each use of the \texttt{enumerate} environment.
-  \item Another entry in the list
-\end{enumerate}
-The steps are repeated until the MST is found.
+The Congested Clique makes the assumption that each node has unlimited computing power and memory space. Thus communication time becomes the bottleneck and the running time is only measure by the number of communication rounds.
+\subsection{\mstalgo}
+\mstalgo is an algorithm developed by Zvi Lotker, Boaz Patt-Shamir, Elan Pavlov, and David Peleg in 2005. It solves the Minimum Spanning Tree ($MST$) problem in $O(\log{\log{n}})$ communication rounds in the Congested Clique model. There are faster and new algorithms for the $MST$ problem in the Congested Clique model e.g. \cite{MSTLogStar} and \cite{MSTConstant}, but \mstalgo is chosen for the following reasons: 
+\begin{itemize}
+	\item[--] \mstalgo is a Congested Clique algorithm. The properties of \mstalgo generalize to the whole algorithm category (will be shown later).
+	\item[--] \mstalgo is simple and easy to understand. It saves time to study and implement the algorithm. So it can be implemented with different programming schemes.
+	\item[--] There is no noticeable round boost compared to \cite{MSTLogStar} and \cite{MSTConstant} within the range of graph size up to millions of edges (under 4 rounds).
+\end{itemize}
+In the \mstalgo algorithm, the nodes of \( G \) are partitioned into disjoint clusters. For each cluster \( F \subseteq \mathcal{F} \), there exists a minimum spanning subtree \( T(F) \). The algorithm begins with each vertex \( v_i \) forming a singleton cluster, i.e., \( \mathcal{F}^0 = \{ F_1^0, \dots, F_n^0 \} \) where \( F_i^0 = \{ v_i \} \) for \( 1 \leq i \leq n \). The clusters are iteratively merged until only a single cluster remains, at which point the algorithm terminates.
+
+The merging process operates in phases, with each phase \( k \geq 0 \) growing the cluster size quadratically. This ensures that there are at most \( O(\log \log n) \) phases. Each phase \( k \) consists of \( O(1) \) communication rounds, implying that the \mstalgo algorithm completes in \( O(\log \log n) \) communication rounds.
+
+
+In each phase, \mstalgo runs following steps:
+\begin{itemize}
+	\item[1.] 
+	\begin{itemize}
+			\item[(a)] Compute the minimum-weight edge $e(v, F')$ that connects $v$ to any node in $F'$ for all clusters $F' \neq F$.
+			\item[(b)] Send $e(v, F')$ to $\ell(F')$ for all clusters $F' \neq F$.
+	\end{itemize}
+
+	\item[2.] If $v = \ell(F)$, then:
+	\begin{itemize}
+			\item[(a)] Using the messages received from Step 1, compute the lightest edge between $F'$ and $F$ for every other cluster $F'$.
+			\item[(b)] Perform (locally) Procedure \textsc{Cheap-Out}. This procedure does the following:
+			\begin{itemize}
+					\item Selects a set $\mathcal{A}(F)$ containing the $N$ cheapest edges that go out of $F$ to $N = |F|$ distinct clusters.
+					\item Appoints for each such edge $e$ a guardian node $g(e)$ in $F$, ensuring that each node in $F$ is appointed as guardian to at most one edge.
+			\end{itemize}
+	\end{itemize}
+
+	\item[3.] Let $e' \in \mathcal{A}(F)$ be the edge for which $v$ was appointed as guardian, i.e., such that $g(e') = v$. Send $e'$ to $v_0$, the node with the minimal ID in the graph.
+	
+	\item[4.] If $v = v_0$, then:
+	\begin{itemize}
+			\item[(a)] Perform (locally) Procedure \textsc{Const-Frags}. This procedure computes $E^k$, the new set of edges to add.
+			\item[(b)] For each edge $e \in E^k$, send a message to $g(e)$.
+	\end{itemize}
+
+	\item[5.] If $v$ receives a message from $v_0$ that $e \in E^k$, then $v$ sends $e$ to all nodes in the graph.
+
+	\item[6.] Each node adds all edges in $E^k$ and computes $T$.
+\end{itemize}
+
+The representativeness of \mstalgo{} can be shown in the following ways:
+\begin{itemize}
+	\item[--] \mstalgo exploit the full connectivity of the graph. In each round, there is a step where each computer sends $O(\log{n})$ messages to all the other computers.
+	\item[--] To comply with the $O(\log{n})$ limit when sending to a unique leader, large data is spilled to other computers before sending.
+	\item[--] The algorithm needs several rounds before its convergence.
+\end{itemize}
 
 \subsection{The super-computer Puhti}
 Used Slurm workload manager \cite{Slurm}, to allocate computing nodes. Each node can have processes. The number of total threads is limited, can get 484 * 2 * 20 for the "M" cluster. Total memory available is 192 GiB. Xeon Gold 6230 is the CPU model (ref needed).
@@ -214,7 +261,7 @@ What is device, what is host, what is a kernel function. How to allocate memory 
 
 \section{Congested clique to MPI}
 \subsection{Congested Clique simulation}
-$\mstalgo$ is simulated with OpenMPI and C++ on CPUs. Multiple CPU threads run cooperatively to simulate the congested clique model. Each thread has its dedicated memory space and computing power. Each thread simulates multiple machines in the congested clique model. The local computation of the congested clique is simulated by each thread's local computation while the communication is handled by OpenMPI.
+\mstalgo is simulated with OpenMPI and C++ on CPUs. Multiple CPU threads run cooperatively to simulate the congested clique model. Each thread has its dedicated memory space and computing power. Each thread simulates multiple machines in the congested clique model. The local computation of the congested clique is simulated by each thread's local computation while the communication is handled by OpenMPI.
 
 MPI (Message-passing interface) is a message-passing library interface specification that message-passing model for parallel computing \cite{MPI}. Open MPI is an open-source Message-passing Interface implementation. 
 
@@ -222,7 +269,7 @@ One CPU thread can hold one or multiple vertices. The thread number is limited. 
 
 TODO how is the communication synchronized.
 
-When running $\mstalgo$, in the beginning, each rank receives input to run the algorithm.
+When running \mstalgo, in the beginning, each rank receives input to run the algorithm.
 The input includes a list of vertices the rank is responsible for and all the adjacent edges.
 
 step 1 $\rightarrow$ MPI\_Alltoall (comm1)\\
@@ -232,7 +279,7 @@ step 4 $\rightarrow$ Local computation on rank 0\\
 step 5 $\rightarrow$ MPI\_Broadcast (comm4)\\
 step 6 $\rightarrow$ Local computation on each thread\\
 
-To ensure the correctness of the algorithm, the result of $\mstalgo$ is compared to the result of the prim's algorithm on the same graph.
+To ensure the correctness of the algorithm, the result of \mstalgo is compared to the result of the prim's algorithm on the same graph.
 
 
 \subsection{Simplification on the first phase}
@@ -269,17 +316,17 @@ Distributed generation: Each rank generates several rows of the adj matrix. And 
 
 \clearpage
 
-\section{$\mstalgo$ performance}
+\section{\mstalgo performance}
 \subsection{Time composition}
 
 \begin{figure}[h]
 	\centering
 		\includegraphics[height=90mm]{./figs/mpi_composition_n1_t8.pdf}
-	\caption{$\mstalgo$ time composition with MPI on one node with 8 threads}
+	\caption{\mstalgo time composition with MPI on one node with 8 threads}
 	\label{fig:mpi_composition_n1_t8}
 \end{figure}
 
-Figure \ref{fig:mpi_composition_n1_t8} shows the time composition of $\mstalgo$ implemented with MPI with a different number of vertices. The hardware is fixed. There are 8 threads on a single node. Each thread has 16G memory for each. 
+Figure \ref{fig:mpi_composition_n1_t8} shows the time composition of \mstalgo implemented with MPI with a different number of vertices. The hardware is fixed. There are 8 threads on a single node. Each thread has 16G memory for each. 
 
 MPI communication is the communication time spent on MPI functions. Rank 0 computation time is the time step spent on step 4, where rank 0 is the only active thread and other threads are idle waiting. The thread computation time is the time threads spend on local computation excluding step 6. MPI communication resembles the communication time in the congested clique model. Thread computation + rank 0 computation together resemble the local computation time in the congested clique model.
 
@@ -292,16 +339,16 @@ As the number of vertices goes up on the fixed hardware, the thread computation 
 \begin{figure}[h]
 	\centering
 		\includegraphics[height=90mm]{./figs/mpi_composition_n8_t1.pdf}
-	\caption{$\mstalgo$ time composition with MPI on 8 nodes with one thread each}
+	\caption{\mstalgo time composition with MPI on 8 nodes with one thread each}
 	\label{fig:mpi_composition_n8_t1}
 \end{figure}
 
-Figure \ref{fig:mpi_composition_n8_t1} shows the same time composition of $\mstalgo$ as in Figure \ref{fig:mpi_composition_n1_t8}. But instead of having 8 threads on a single node, there are 8 nodes with one thread each. A similar time composition pattern can be observed. Together with \ref{fig:mpi_composition_n1_t8}, it shows that the time composition of $\mstalgo$ is not affected by how the threads are distributed. 
+Figure \ref{fig:mpi_composition_n8_t1} shows the same time composition of \mstalgo as in Figure \ref{fig:mpi_composition_n1_t8}. But instead of having 8 threads on a single node, there are 8 nodes with one thread each. A similar time composition pattern can be observed. Together with \ref{fig:mpi_composition_n1_t8}, it shows that the time composition of \mstalgo is not affected by how the threads are distributed. 
 
 \begin{figure}[h]
 	\centering
 		\includegraphics[height=90mm]{./figs/strong_scale_16384_composition.pdf}
-	\caption{$\mstalgo$ strong scaling time composition for with 16384 vertices}
+	\caption{\mstalgo strong scaling time composition for with 16384 vertices}
 	\label{fig:mpi_composition_strong_scaling_16384}
 \end{figure}
 
@@ -313,18 +360,18 @@ This concludes that for larger graphs, the fewer vertices on each thread, the mo
 \begin{figure}[h]
 	\centering
 		\includegraphics[height=25mm]{./figs/n1_t8_16384_details.png}
-	\caption{$\mstalgo$ detailed time composition with MPI with 8 threads and 16384 vertices}
+	\caption{\mstalgo detailed time composition with MPI with 8 threads and 16384 vertices}
 	\label{fig:n1_t8_16384_details}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
 		\includegraphics[height=25mm]{./figs/n1_t8_16384_details_original.png}
-	\caption{$\mstalgo$ with no simplification detailed time composition with MPI with 8 threads and 16384 vertices}
+	\caption{\mstalgo with no simplification detailed time composition with MPI with 8 threads and 16384 vertices}
 	\label{fig:n1_t8_16384_details_original}
 \end{figure}
 
-Figure \ref{fig:n1_t8_16384_details} is a detailed time composition of $\mstalgo$ with MPI with 8 threads on a single node and 16384 vertices. $mstalgo$ ran for 3 rounds. $t\_mpi$ is the time spent on MPI communication in a round. It is a sum of $comm0$, $comm1$, $comm2$, $comm3$ and, $comm4$. $t\_rank0$ is the rank 0 computation time in each round. It corresponds to the step 4 of the algorithm. $t\_total$ is the total time spent on the round. The difference between $t\_total$ and ($t\_mpi$ + $t\_rank0$) is the time spent on parallel computation. 
+Figure \ref{fig:n1_t8_16384_details} is a detailed time composition of \mstalgo with MPI with 8 threads on a single node and 16384 vertices. $mstalgo$ ran for 3 rounds. $t\_mpi$ is the time spent on MPI communication in a round. It is a sum of $comm0$, $comm1$, $comm2$, $comm3$ and, $comm4$. $t\_rank0$ is the rank 0 computation time in each round. It corresponds to the step 4 of the algorithm. $t\_total$ is the total time spent on the round. The difference between $t\_total$ and ($t\_mpi$ + $t\_rank0$) is the time spent on parallel computation. 
 
 The first phase takes the least time as the result of the simplification. Without the simplification, the first phase takes the most time shown in \ref{fig:n1_t8_16384_details_original}. The Time decreases as the rounds go on. The number of clusters decreases as more and more vertices are added to the spanning tree along the process. This means, that the more rounds the algorithm runs, the fewer edges to process for the next round. The MPI communication time and the computation time show a correlation to the number of edges to process in the round. The unbalanced workload in each round causes an unbalanced running time.
 
@@ -334,11 +381,11 @@ The time spent on each round is unbalanced. The time composition of each round i
 \begin{figure}[h]
 	\centering
 		\includegraphics[height=70mm]{./figs/mpi_cpp_strong_scaling.pdf}
-	\caption{Strong scaling performance of $\mstalgo$}
+	\caption{Strong scaling performance of \mstalgo}
 	\label{fig:mpi_cpp_strong_scaling}
 \end{figure}
 
-Figure \ref{fig:mpi_cpp_strong_scaling} shows the strong scaling performance of $\mstalgo$. There are three different lines in the plot with 8192, 16384, and 32768 vertices. The number of threads increases from 8 to 258 Horizontally. 
+Figure \ref{fig:mpi_cpp_strong_scaling} shows the strong scaling performance of \mstalgo. There are three different lines in the plot with 8192, 16384, and 32768 vertices. The number of threads increases from 8 to 258 Horizontally. 
 
 All three strong scaling plots are very close to the ideal speedup line. The proportion of execution time spent on the part that can be parallelized is dominant \cite{HPCScaling}. The algorithm scales the best in the strong scaling with 32768 vertices compared to the rest lines, as it is the closest line to the ideal speedup line. The algorithm scales the worst in the strong scaling with 8192 vertices compared to the rest lines, as it is the furthest line to the ideal speedup line. 
 
@@ -346,7 +393,7 @@ From figure \ref{fig:mpi_cpp_strong_scaling}, the larger the graph, the better s
 \begin{figure}[h]
 	\centering
 		\includegraphics[height=70mm]{./figs/mpi_cpp_weak_scaling.pdf}
-	\caption{Weak scaling performance of $\mstalgo$}
+	\caption{Weak scaling performance of \mstalgo}
 	\label{fig:mpi_cpp_weak_scaling}
 \end{figure}
 
@@ -354,24 +401,24 @@ From figure \ref{fig:mpi_cpp_strong_scaling}, the larger the graph, the better s
 \begin{figure}[h]
 	\centering
 		\includegraphics[height=70mm]{./figs/prim's_vs_A.pdf}
-	\caption{Prim's algorithm compared to $\mstalgo$ performance}
+	\caption{Prim's algorithm compared to \mstalgo performance}
 	\label{fig:prims_vs_A}
 \end{figure}
-Prim's algorithm is used as the sequential algorithm to compare the performance of $\mstalgo$. It is implemented also in C++ and runs on a single thread on Puhti, with 16G memory.
+Prim's algorithm is used as the sequential algorithm to compare the performance of \mstalgo. It is implemented also in C++ and runs on a single thread on Puhti, with 16G memory.
 
 With 16G memory, prim's algorithm can process 32678-vertex complete graph (but not 65356), which has $32678 \times 32677 / 2 (5.33 \times 10 ^ 8)$ edges, using 88 seconds (). The bottleneck for prim's algorithm to process more edges is to fit the graph to the memory.
 
-Because of the distributed nature of $\mstalgo$, larger graphs can be fit into the memory as the number of threads increases. When working on graphs with the same size, the program needs more memory for MPI's buffer compared to the prim's algorithms. 
+Because of the distributed nature of \mstalgo, larger graphs can be fit into the memory as the number of threads increases. When working on graphs with the same size, the program needs more memory for MPI's buffer compared to the prim's algorithms. 
 
-As shown in \ref{fig:prims_vs_A}, with more than 16 threads, $\mstalgo$ can process 65536-vertex complete graph (but not 131072). And $\mstalgo$ outperforms the prim's algorithm by speed when there are more than $64$ threads.
+As shown in \ref{fig:prims_vs_A}, with more than 16 threads, \mstalgo can process 65536-vertex complete graph (but not 131072). And \mstalgo outperforms the prim's algorithm by speed when there are more than $64$ threads.
 
-From \ref{fig:prims_vs_A} as the number of threads increases, the time taken by $\mstalgo$ decreases. When
+From \ref{fig:prims_vs_A} as the number of threads increases, the time taken by \mstalgo decreases. When
 % Single node performance
 
 \begin{figure}[h]
 	\centering
 		\includegraphics[height=70mm]{./figs/prim's_vs_MST_loglog(n)_single_thread.pdf}
-	\caption{Prim's algorithm compared to $\mstalgo$ performance with single thread}
+	\caption{Prim's algorithm compared to \mstalgo performance with single thread}
 	\label{fig:prim's_vs_A_single_thread.pdf}
 \end{figure}
 
@@ -384,7 +431,7 @@ From \ref{fig:prims_vs_A} as the number of threads increases, the time taken by 
 
 \section{Congested clique to CUDA}
 \subsection{Congested Clique simulation}
-$\mstalgo$ is simulated with CUDA on Nvidia GPUs. Specifically, the Nvidia Tesla V100 GPU according to $\cite{PuhtiDoc}$. The V100 GPU has the capability for issuing 163,840 threads. Compared to CPU threads, GPU threads are more lightweight and can be issued in a larger number. This features allows each CUDA thread to simulate one vertex in the graph.
+\mstalgo is simulated with CUDA on Nvidia GPUs. Specifically, the Nvidia Tesla V100 GPU according to $\cite{PuhtiDoc}$. The V100 GPU has the capability for issuing 163,840 threads. Compared to CPU threads, GPU threads are more lightweight and can be issued in a larger number. This features allows each CUDA thread to simulate one vertex in the graph.
 
 CUDA is "a general purpose parallel computing platform and programming model that leverages the parallel compute engine in NVIDIA GPUs to solve many complex computational problems in a more efficient way than on a CPU" (\cite{CUDA}). 
 
@@ -396,7 +443,7 @@ Each kernel function is only responsible for one communication round. The kernel
 
 When there is only on machine active in the Congested Clique Model, instead of launching a kernel function with a single thread, that part of the computation is done on the CPU. CPU is far more efficient in handling single-threaded computation than the GPU. 
 
-The input graph of $\mstalgo$ is generated on the CPU and copied to the GPU memory. Each thread learns its adjacent edges by reading the graph from the GPU memory. 
+The input graph of \mstalgo is generated on the CPU and copied to the GPU memory. Each thread learns its adjacent edges by reading the graph from the GPU memory. 
 
 step 1 $\rightarrow$ min\_to\_cluster\_kernel\\
 step 2 $\rightarrow$ min\_from\_cluster\_kernel the min edges are not sent to the guardians\\
@@ -414,25 +461,29 @@ Thus, Introducing sparse graphs address the under-utilization of the GPU's capab
 The complete graph is represented by an adjacency matrix ,where each column represents the adjacent edges of a vertex. Whereas the sparse graph is represented by an adjacency list, where each vertex has a list of adjacent edges. 
 
 % Why the algo works on sparse graph
-$\mstalgo$ is designed to work on a complete graph but it does work for spares graphs as well. In the Congested Clique, the network graph is the equivalent as the graph to be solved, which is a complete graph / network. To solve the sparse graph, the network graph stays complete and the sparse graph is a subgraph of the network graph. 
+\mstalgo is designed to work on a complete graph but it does work for spares graphs as well. In the Congested Clique, the network graph is the equivalent as the graph to be solved, which is a complete graph / network. To solve the sparse graph, the network graph stays complete and the sparse graph is a subgraph of the network graph. 
 
 TODO proof that the algo works
 
-A MST can always be found in a complete graph, but not in a sparse graph. To make a fair comparison for $\mstalgo$ on complete and sparse graphs, the sparse graph is generated in a way that a MST can be found. The adjacency list of the sparse graph is generated in two steps.
+A MST can always be found in a complete graph, but not in a sparse graph. To make a fair comparison for \mstalgo on complete and sparse graphs, the sparse graph is generated in a way that a MST can be found. The adjacency list of the sparse graph is generated in two steps.
 
 First, a Prüfer sequence is generated with all the vertices and converted into a tree. A Prüfer sequence is an unique sequence of vertices that encodes a tree. The tree serves as the skeleton of the sparse graph making sure the graph is connected. The second step is to add edges tree randomly. When create the sparse graph, the expected rank and the number of vertices are given. So when the number of edges meets the rank requirement, the second step stops.
 
 \subsection{Best practices}
-$\mstalgo$ on CUDA follows the best practices and common sense as it with $MPI$. All the tree information is maintained on the host and shared with the device when the kernel functions are launched. The tree is kept as a union-find data structure. 
+\mstalgo on CUDA follows the best practices and common sense as it with $MPI$. All the tree information is maintained on the host and shared with the device when the kernel functions are launched. The tree is kept as a union-find data structure. 
 
-(?) The simplification is not applied to the CUDA implementation, because the bandwidth is not a bottleneck anymore.
-% union find and simplification
+The same simplification is applied to the CUDA implementation.
+
+\subsection{Profiling}
+%  mention memory copy device to host and host to device, kernel function time, 
+Profiling is done with nvprof. TODO what nvprof.Profiling result shows the time spent on the memory copying and the kernel functions. The profiling result shows the time spent on each kernel function. The time spent on each kernel function is the time spent on the communication and local computation in each round.
 \clearpage
 
 \section{CUDA performance}
 % What to compare (CPU single thread? why not)
 \subsection{Time composition}
 \subsection{Comparison with Prim's on single threaded CPU}
+% capability of the GPU (How many edges)
 \subsection{Comparison with MPI (time composition)}
 \subsection{Scalability}
 \subsection{Complete vs sparse graph}
@@ -477,6 +528,11 @@ The MPI implementation is more natural than the CUDA implementation.
 
 	\bibitem{Prufer} H. Prüfer, "Neuer Beweis eines Satzes über Permutationen," \textit{Archiv der Mathematischen Physik}, vol. 27, pp. 742--744, 1918.
 
+	\bibitem{IBMsupercomputing} "Supercomputing," IBM, Accessed: Jul. 16, 2024. [Online]. Available: \url{https://www.ibm.com/topics/supercomputing}
+
+	\bibitem{MSTConstant} K. Nowicki, "A deterministic algorithm for the MST problem in constant rounds of congested clique," \textit{arXiv.org}, Dec. 9, 2019. [Online]. Available: \url{https://arxiv.org/abs/1912.04239}
+
+	\bibitem{MSTLogStar} M. Ghaffari and M. Parter, "MST in Log-Star rounds of congested clique," \textit{ACM}, 2016. [Online]. Available: \url{https://doi.org/10.1145/2933057.2933103}
 \end{thebibliography}
 
 
