@@ -1,0 +1,99 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+% Useful packages
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{listings}
+\usepackage{float}
+\usepackage[numbers]{natbib}
+\usepackage[
+backend=biber,
+style=numeric,
+sorting=ynt
+]{biblatex}
+\addbibresource{references.bib}
+
+\title{MPC in Practice Research Plan}
+\author{Tianxing Wu}
+
+\begin{document}
+\maketitle
+
+\section{Research Purpose}
+The purpose of this research is to explore and understand the compatibility between various message-passing frameworks (such as the k-machine model, congested clique, and BSP) and different distributed computing frameworks, including MPI, OpenMP, Pytorch, and TensorFlow.
+
+Evaluation of Compatibility/Incompatibility:
+\begin{enumerate}
+  \item{
+    Evaluating Performance:
+      \begin{itemize}
+        \item How does this framework perform in comparison to another framework with the same message-passing model and problem, in terms of communication rounds and memory usage?
+        \item How does this framework's performance change if the problem scales, in terms of strong scaling and weak scaling?
+      \end{itemize}
+    }
+  \item {
+    System Requirements from the Programming Framework:
+      \begin{itemize}
+        \item Memory usage
+        \item CPU usage
+        \item Network bandwidth
+        \item Disk I/O
+      \end{itemize}
+    }
+\end{enumerate}
+
+\section{Objective}
+For a specific framework and model, the objective is to demonstrate one of the following:
+\begin{itemize}
+  \item The framework and model are perfectly compatible.
+  \item The framework and model are compatible with some additional effort, enabling them to work together efficiently to solve problems.
+  \item The framework and model are completely incompatible.
+\end{itemize}
+To demonstrate compatibility, algorithms will be presented with accompanying proofs. To indicate incompatibility, proofs will also be required.
+
+\section{Method}
+\begin{itemize}
+  \item Reviewing and understanding the documentation of programming frameworks.
+  \item Analyzing the compatibility of frameworks and models:
+      \begin{enumerate}
+        \item Selecting classical problems that require High-Performance Computing (HPC), such as graph problems.
+        \item Designing algorithms using the selected frameworks and models.
+        \item Analyzing performance in terms of time and memory usage, considering scalability.
+        \item Concluding the compatibility between a specific model and a framework.
+        \item (Optional) Applying the algorithm on real machines to verify the results.
+      \end{enumerate}
+\end{itemize}
+
+\section{Plan}
+The duration of this research is planned for 6 months.
+
+Months 1 - 2:
+\begin{itemize}
+  \item Literature Review. Conduct a comprehensive review of existing studies on MPI, OpenMP, PyTorch, TensorFlow, and message-passing models like the k-machine model, congested clique, and BSP.
+  \item Selecting problems for analysis.
+  \item Developing metrics for evaluating performance.
+\end{itemize}
+
+Months 3 - 4:
+\begin{itemize}
+  \item Design algorithms tailored to the frameworks and models, analyze their performance, and evaluate them using the developed metrics.
+\end{itemize}
+
+Months 5 - 6:
+\begin{itemize}
+  \item Writing the research report.
+\end{itemize}
+
+Optional:
+\begin{itemize}
+  \item Applying the algorithms on real machines to verify the results.
+\end{itemize}
+
+\medskip
+\nocite{*}
+\printbibliography
+\end{document}

@@ -1,0 +1,9 @@
+[submodule "impl/MST_O_logn_logn"]
+	path = impl/MST_O_logn_logn
+	url = https://github.com/Chi-Chu319/MST_O_logn_logn
+[submodule "MST_O_logn_logn_C-"]
+	path = impl/MST_O_logn_logn_C-
+	url = https://github.com/Chi-Chu319/MST_O_logn_logn_C-
+[submodule "impl/MST_O_logn_logn_Cuda"]
+	path = impl/MST_O_logn_logn_Cuda
+	url = https://github.com/Chi-Chu319/MST_O_logn_logn_Cuda

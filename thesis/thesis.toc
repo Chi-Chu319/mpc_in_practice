@@ -1,0 +1,47 @@
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {section}{Abstract{} }{3}{section*.1}%
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {section}{Preface}{4}{section*.2}%
+\contentsline {section}{Contents}{5}{section*.3}%
+\contentsline {section}{Symbols and abbreviations}{7}{section*.5}%
+\contentsline {section}{\numberline {1}Introduction}{8}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Methodology}{8}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Objective}{9}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Preliminaries}{11}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Congested clique (also known as CLIQUE)}{11}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}$MST\_\log \log {n}${}}{11}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}The supercomputer Puhti}{12}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Parallel Computing Frameworks: MPI and CUDA}{13}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Message Passing Interface (MPI)}{13}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}CUDA}{14}{subsubsection.2.4.2}%
+\contentsline {section}{\numberline {3}Congested Clique with MPI}{15}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Communication}{15}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Simplifications and Optimizations in the Implementation}{17}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Simplification in the First Phase}{17}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Direct Communication to rank-0}{18}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Union-Find for Cycle Detection}{18}{subsubsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.3}Vertex Partitioning and Graph Generation}{18}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Performance with MPI}{20}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Conclusion overview}{20}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Performance}{20}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Comparison with prim's algorithm}{23}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Python vs C++}{25}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Congested clique with CUDA}{27}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Communication}{27}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Memory read and write}{29}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Complete and sparse graphs}{30}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Best practices}{30}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Profiling}{31}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Performance with CUDA}{32}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Conclusion overview}{32}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Performance}{32}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Complete vs sparse graph}{34}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Comparison with Prim's on single threaded CPU}{35}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Conclusion}{37}{section.7}%
+\contentsline {section}{\numberline {8}Future work}{38}{section.8}%
+\contentsline {section}{References}{39}{section*.19}%

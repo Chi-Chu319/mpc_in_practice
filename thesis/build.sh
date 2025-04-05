@@ -1,0 +1,1 @@
+latexmk -pdf -pdflatex="pdflatex" thesis.tex

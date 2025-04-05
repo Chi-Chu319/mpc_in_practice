@@ -1,0 +1,219 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global}
+    \entry{Dagum1998}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5a3afed8356b91cb7461d327b71fd665}{%
+           family={Dagum},
+           familyi={D\bibinitperiod},
+           given={Leonardo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=3311f850582a1d00feec2ef4ff7b183a}{%
+           family={Menon},
+           familyi={M\bibinitperiod},
+           given={Ramesh},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{bf97b7886665f4e63fa65024a4dd2da2}
+      \strng{fullhash}{bf97b7886665f4e63fa65024a4dd2da2}
+      \strng{bibnamehash}{bf97b7886665f4e63fa65024a4dd2da2}
+      \strng{authorbibnamehash}{bf97b7886665f4e63fa65024a4dd2da2}
+      \strng{authornamehash}{bf97b7886665f4e63fa65024a4dd2da2}
+      \strng{authorfullhash}{bf97b7886665f4e63fa65024a4dd2da2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Computational Science & Engineering}
+      \field{number}{1}
+      \field{title}{OpenMP: an industry standard API for shared-memory programming}
+      \field{volume}{5}
+      \field{year}{1998}
+      \true{nocite}
+      \field{pages}{46\bibrangedash 55}
+      \range{pages}{10}
+    \endentry
+    \entry{Krishnamurthy2002}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=04f860aabbcc66922143c48686ffbd89}{%
+           family={Krishnamurthy},
+           familyi={K\bibinitperiod},
+           given={Arvind},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d37a799d58f59d09c957b2d507bb8bb2}{%
+           family={Zahorjan},
+           familyi={Z\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{2cbbc58fb6f8fcbe2eb1290f7dd59511}
+      \strng{fullhash}{2cbbc58fb6f8fcbe2eb1290f7dd59511}
+      \strng{bibnamehash}{2cbbc58fb6f8fcbe2eb1290f7dd59511}
+      \strng{authorbibnamehash}{2cbbc58fb6f8fcbe2eb1290f7dd59511}
+      \strng{authornamehash}{2cbbc58fb6f8fcbe2eb1290f7dd59511}
+      \strng{authorfullhash}{2cbbc58fb6f8fcbe2eb1290f7dd59511}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{University of Washington}
+      \field{title}{Parallel Algorithms}
+      \field{year}{2002}
+      \true{nocite}
+    \endentry
+    \entry{Abadi2015}{misc}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=9a04ae935da573a7aa9c83afdf2fd845}{%
+           family={Abadi},
+           familyi={A\bibinitperiod},
+           given={Martín},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{24b1e0a436b566c814359b41f12b3ce3}
+      \strng{fullhash}{24b1e0a436b566c814359b41f12b3ce3}
+      \strng{bibnamehash}{24b1e0a436b566c814359b41f12b3ce3}
+      \strng{authorbibnamehash}{24b1e0a436b566c814359b41f12b3ce3}
+      \strng{authornamehash}{24b1e0a436b566c814359b41f12b3ce3}
+      \strng{authorfullhash}{24b1e0a436b566c814359b41f12b3ce3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Software available from tensorflow.org}
+      \field{note}{\url{https://www.tensorflow.org/}}
+      \field{title}{TensorFlow: Large-Scale Machine Learning on Heterogeneous Systems}
+      \field{year}{2015}
+      \true{nocite}
+    \endentry
+    \entry{MPI2015}{manual}{}
+      \list{organization}{1}{%
+        {Message Passing Interface Forum}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{MPI: A Message-Passing Interface Standard Version 3.1}
+      \field{year}{2015}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.mpi-forum.org/docs/
+      \endverb
+      \verb{url}
+      \verb https://www.mpi-forum.org/docs/
+      \endverb
+    \endentry
+    \entry{Augustine2018}{article}{}
+      \name{author}{7}{}{%
+        {{hash=31c90774d20b4fa8e13b7255f5bce9ca}{%
+           family={Augustine},
+           familyi={A\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5d96192e54fb886515ba311eba73c18d}{%
+           family={Ghaffari},
+           familyi={G\bibinitperiod},
+           given={Mohsen},
+           giveni={M\bibinitperiod}}}%
+        {{hash=232c5afd44c18a71dc1c9d8b092e42ca}{%
+           family={Gmyr},
+           familyi={G\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=5fe45b0265cc3cbc67130e0f21e1d126}{%
+           family={Hinnenthal},
+           familyi={H\bibinitperiod},
+           given={Kristian},
+           giveni={K\bibinitperiod}}}%
+        {{hash=06b0d2204e3c0bd58a7482152b266209}{%
+           family={Kuhn},
+           familyi={K\bibinitperiod},
+           given={Fabian},
+           giveni={F\bibinitperiod}}}%
+        {{hash=757ee43203ad9bbb1f0624d13926a6a9}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod}}}%
+        {{hash=001eb68115ee3ba68d51ad0bf6de6891}{%
+           family={Scheideler},
+           familyi={S\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{caf026843bc4ecea8825386a955accee}
+      \strng{fullhash}{a8224936f1ccd74c4dbd7e468ae7207c}
+      \strng{bibnamehash}{caf026843bc4ecea8825386a955accee}
+      \strng{authorbibnamehash}{caf026843bc4ecea8825386a955accee}
+      \strng{authornamehash}{caf026843bc4ecea8825386a955accee}
+      \strng{authorfullhash}{a8224936f1ccd74c4dbd7e468ae7207c}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1805.07294v1}
+      \field{title}{Distributed Computation in the Node-Congested Clique}
+      \field{year}{2018}
+      \true{nocite}
+    \endentry
+    \entry{Augustine2021}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=102b0c11d2c8def381b89c5d5fc51268}{%
+           family={Augustine},
+           familyi={A\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c16ad83d785e6507ab8c186561ec4c63}{%
+           family={Kothapalli},
+           familyi={K\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=46f5edbc235426523e67ce61c355640d}{%
+           family={Pandurangan},
+           familyi={P\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{47d14a611779df314e656a2c74429aba}
+      \strng{fullhash}{47d14a611779df314e656a2c74429aba}
+      \strng{bibnamehash}{47d14a611779df314e656a2c74429aba}
+      \strng{authorbibnamehash}{47d14a611779df314e656a2c74429aba}
+      \strng{authornamehash}{47d14a611779df314e656a2c74429aba}
+      \strng{authorfullhash}{47d14a611779df314e656a2c74429aba}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2021 IEEE International Parallel and Distributed Processing Symposium (IPDPS)}
+      \field{title}{Efficient Distributed Algorithms in the k-machine model via PRAM Simulations}
+      \field{year}{2021}
+      \true{nocite}
+      \field{pages}{223\bibrangedash 232}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/IPDPS49936.2021.00031
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
